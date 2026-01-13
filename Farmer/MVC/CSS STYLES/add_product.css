@@ -1,0 +1,193 @@
+/* ===== BASIC RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fafafa;
+    color: #333;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #145214;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.navbar .nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #27ae60;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Auth buttons */
+.auth-buttons .btn {
+    background-color: #468962;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #50a875;
+    color: #333;
+    border-radius: 5px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-image: url('images/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== ADD PRODUCT SECTION ===== */
+.add-product {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.add-product .container {
+    max-width: 450px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.add-product h2 {
+    text-align: center;
+    color: #27ae60;
+    margin-bottom: 1.5rem;
+}
+
+/* FORM – LINE BY LINE FIX */
+.add-product form {
+    display: block;
+}
+
+.add-product form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.add-product form input,
+.add-product form select,
+.add-product form textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.add-product form textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Submit button */
+.add-product form button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-product form button:hover {
+    background-color: #1e8449;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    background-color: #145214;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #d4edda;
+    color: #145214;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
