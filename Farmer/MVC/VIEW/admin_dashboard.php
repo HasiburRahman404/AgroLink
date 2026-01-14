@@ -20,7 +20,7 @@
     <aside class="sidebar">
         <ul>
             <li class="active">Dashboard</li>
-            <li>Add Product</li>
+            <li>..</li>
             <li>My Products</li>
             <li>Orders</li>
             <li>Earnings</li>

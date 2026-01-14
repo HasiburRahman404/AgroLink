@@ -1,0 +1,104 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+    background: #2e7d32;
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 14px;
+}
+
+.logout {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #1b5e20;
+    min-height: calc(100vh - 60px);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    color: #e0f2f1;
+    cursor: pointer;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+    background: #388e3c;
+}
+
+.content {
+    flex: 1;
+    padding: 25px;
+}
+
+/* ===== HELP FORM ===== */
+.help-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.help-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.help-form input,
+.help-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.help-form button {
+    margin-top: 15px;
+    background: #2e7d32;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.help-form button:hover {
+    background: #1b5e20;
+}
+
+
