@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("images/agriculture-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1{
+
+    background:none;
+    text-align: center;
+    color: green;
+    padding: 12px 30px;
+    
+    
+    
+}
+
+.container {
+    width: 400px;
+    background: rgba(209, 255, 216, 0.9);
+    margin: 80px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #e1a204;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4c8501;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+
+
+input.error-border {
+    border: 1px solid red;
+}
+
+.success {
+    background-color: #d4edda;
+    
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+}
+
