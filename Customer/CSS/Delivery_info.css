@@ -95,3 +95,7 @@ button:hover {
    background-color: #046d1d;
    color:#f6f8f7
 }
+.error{
+    color: red;
+    font-size: 14px;
+}

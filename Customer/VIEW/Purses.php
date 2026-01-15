@@ -107,7 +107,7 @@
             <span id="grandTotal">534</span> Tk
         </div>
 
-        <form action="process.php" method="POST">
+        <form action="Delivery_info.php" method="POST">
             <input type="hidden" name="final_amount" id="final_amount" value="534">
             <button type="submit">Proceed to Checkout</button>
         </form>
