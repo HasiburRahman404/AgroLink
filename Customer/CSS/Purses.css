@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.top-header {
+    background: #a8eda8;
+    color: green;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* Navbar */
+.nav-bar {
+    background: #dff1df;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 🔥 FIX HERE */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.verify-btn,
+.partner-btn {
+    background: #dff1df;
+    border: none;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.verify-btn:hover,
+.partner-btn:hover {
+    color: green;
+}
+
+/* Cart */
+.cart-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.cart-items,
+.checkout {
+    background: #c7f6c8;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.cart-items {
+    flex: 2;
+}
+
+.checkout {
+    flex: 1;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.product img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.details {
+    flex: 1;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+.item-total {
+    width: 90px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.total {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 80px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #069b15;
+}
+
+
+/* Contact Section */
+.contact {
+    background-color: #145214;  
+    color: #ffffff;             
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.contact h2 {
+    color: #fefffe; 
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #d4edda;  
+    color: #145214;            
+    text-align: center;
+    padding: 1.0rem 1rem;
+    margin-top: 0;          
+    font-weight: bold;
+}
+
