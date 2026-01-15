@@ -13,6 +13,6 @@ if ($conn->connect_error) {
 }
 
 // Optional: set charset to avoid encoding issues
-$conn->set_charset("utf8");
+//$conn->set_charset("utf8");
 
 ?>

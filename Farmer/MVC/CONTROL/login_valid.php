@@ -1,6 +1,10 @@
 <?php
 session_start();
-include 'Database_conn.php';
+include '../MODEL/Database_conn.php';
+if(isset($_SESSION["email"])){
+    header("Location:admin_dashboard.php");
+    exit();
+}
 
 $emailErr = $passwordErr = "";
 $email = "";
@@ -27,11 +31,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $hashedPassword = $row['password'];
 
             if (password_verify($password, $hashedPassword)) {
-                // Session variables
-                $_SESSION['email'] = $email;
-               // $_SESSION['loggedin'] = true;
+                
+              // $_SESSION['email'] = $email;
+                foreach($result as $R){
+            $_SESSION["username"]=$R["name"];
+            $_SESSION["email"]=$R["email"];
+            $_SESSION["number"]=$R["phonenumber"];
+            
+            }
+            if(isset($_POST['remember'])){
+                $rem =$_POST['remember'];
+                setcookie("cookie_email",$email,time() + 60*60*24*30,'/');
+                setcookie("cookie_rem",$rem, time() + 60*60*24*30,'/');
+            }
+               
 
-                header(); // Redirect after login
+                header("location:../VIEW/admin_dashboard.php"); 
                 exit();
             } else {
                 $loginError = "Incorrect password!";
