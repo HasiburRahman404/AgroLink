@@ -121,7 +121,7 @@
     Cancel
 </button>
 
-    <button type="submit">Next</button>
+    <button type="button" onclick="window.location.href='Payment_select.php'">Next</button>
 </div>
 
 </form>
