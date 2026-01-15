@@ -88,17 +88,18 @@
             <img src="../images/fruit.jpg" alt="Fruits" class="category-img">
             <h4>Fruits</h4>
         </a>
-<!--
+
         <a href="grains.php" class="category-card">
-            <img src="images/cereal-grains.jpg" alt="Grains" class="category-img">
+            <img src="../images/cereal-grains.jpg" alt="Grains" class="category-img">
             <h4>Grains</h4>
         </a>
--->
+
+<!--
         <a href="livestock.php" class="category-card">
             <img src="../images/farm-livestock.jpg" alt="Livestock" class="category-img">
             <h4>Livestock</h4>
         </a>
-
+-->
         <a href="dairy.php" class="category-card">
             <img src="../images/dairy.jpg" alt="Dairy" class="category-img">
             <h4>Dairy</h4>
