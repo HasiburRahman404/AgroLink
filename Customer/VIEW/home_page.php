@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
 <head>
     
@@ -84,7 +84,7 @@
             <h4>Vegetables</h4>
         </a>
 
-        <a href="../category_of_fruits/Fruits.php" class="category-card">
+        <a href="../VIEW/Fruits.php" class="category-card">
             <img src="../images/fruit.jpg" alt="Fruits" class="category-img">
             <h4>Fruits</h4>
         </a>
