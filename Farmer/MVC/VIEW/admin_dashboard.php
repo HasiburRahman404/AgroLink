@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Farmer Dashboard - AgroLink</title>
-    <link rel="stylesheet" href="admin_dashboard.css">
+    <link rel="stylesheet" href="../CSS STYLES/admin_dashboard.css">
 </head>
 <body>
 
 <!-- ===== TOP NAVBAR ===== -->
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
-    <a href="#" class="logout">Logout</a>
+    <a href="../CONTROL/farmerlogout.php" class="logout">Logout</a>
 </header>
 
 <!-- ===== MAIN CONTAINER ===== -->
 <div class="container">
 
     <!-- ===== SIDEBAR ===== -->
-    <aside class="sidebar">
-        <ul>
-            <li class="active">Dashboard</li>
-            <li>..</li>
-            <li>My Products</li>
-            <li>Orders</li>
-            <li>Earnings</li>
-            <li>Profile</li>
-        </ul>
-    </aside>
+<aside class="sidebar">
+    <ul>
+        <li><button onclick="location.href='dashboard.php'" class="active">Dashboard</button></li>
+        <li><button onclick="location.href='my_products.php'">My Products</button></li>
+        <li><button onclick="location.href='orders.php'">Orders</button></li>
+        <li><button onclick="location.href='add_product.php'">Add Porducts</button></li>
+        <li><button onclick="location.href='farmers_help.php'">Farmers Help</button></li>
+        <li><button onclick="location.href='profile.php'">Profile</button></li>
+    </ul>
+</aside>
+
 
     <!-- ===== MAIN CONTENT ===== -->
     <main class="content">

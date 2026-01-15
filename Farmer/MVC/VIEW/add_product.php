@@ -1,6 +1,6 @@
 <?php
 // Include validation at the top
-include 'add_product_valid.php';
+include '../CONTROL/add_product_valid.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include 'add_product_valid.php';
 <head>
     <meta charset="UTF-8">
     <title>Farmer Dashboard - Add Product | AgroLink</title>
-    <link rel="stylesheet" href="add_product.css">
+    <link rel="stylesheet" href="../CSS STYLES/add_product.css">
     <style>
         .error { color: red; font-size: 0.9em; margin-top: 3px; display: block; }
         .success { color: green; font-size: 1em; text-align: center; margin-bottom: 15px; }

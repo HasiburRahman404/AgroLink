@@ -1,0 +1,156 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    background: #2e7d32;
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.topbar .logo span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.logout {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    background: #1b5e20;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #e0f2f1;       /* Text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.sidebar ul li.active a {
+    background: #388e3c;
+    color: #fff;
+}
+
+.sidebar ul li a:hover {
+    background: #388e3c;
+    color: #fff;
+}
+
+/* ===== MAIN CONTENT ===== */
+.content {
+    flex: 1;
+    padding: 25px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ===== HEADER ABOVE TABLE ===== */
+.my-products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #2e7d32;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1b5e20;
+}
+
+/* ===== TABLE ===== */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-table th,
+.product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.product-table th {
+    background: #2e7d32;
+    color: #fff;
+}
+
+.product-table img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btns button {
+    background: #0288d1;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-btns button.delete {
+    background: #d32f2f;
+}
+
+.action-btns button:hover {
+    opacity: 0.9;
+}

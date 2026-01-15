@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include "Database_conn.php";
+include "../MODEL/Database_conn.php";
 
 // Fetch all products
 $sql = "SELECT * FROM products ";
@@ -12,7 +12,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>My Products - AgroLink Farmer</title>
-    <link rel="stylesheet" href="my_product.css">
+    <link rel="stylesheet" href="../CSS STYLES/my_product.css">
 </head>
 <body>
 

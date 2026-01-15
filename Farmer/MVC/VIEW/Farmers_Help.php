@@ -1,5 +1,5 @@
 <?php
-include 'Farmers_Help_Valid.php';
+include '../CONTROL/Farmers_Help_Valid.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ include 'Farmers_Help_Valid.php';
 <head>
     <meta charset="UTF-8">
     <title>Farmer Help Hub - AgroLink</title>
-    <link rel="stylesheet" href="Farmers_Help.css">
+    <link rel="stylesheet" href="../CSS STYLES/Farmers_Help.css">
     <style>
         .error { color: red; font-size: 13px; }
         .success { color: green; font-size: 14px; margin-bottom: 10px; }

@@ -1,6 +1,6 @@
 <?php
 // Include database connection (your previous format)
-include "Database_conn.php"; // make sure this file defines $conn
+include "../MODEL/Database_conn.php"; // make sure this file defines $conn
 
 // ===== INITIALIZE VARIABLES =====
 $email = $problem = "";

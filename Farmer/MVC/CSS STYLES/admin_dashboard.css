@@ -50,17 +50,26 @@ body {
 
 .sidebar ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
-    color: #e0f2f1;
-    cursor: pointer;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.sidebar ul li:hover,
-.sidebar ul li.active {
+/* Style the links inside li */
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;       /* White text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+}
+
+/* Hover and active state */
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
     background: #388e3c;
 }
 
@@ -133,3 +142,29 @@ table th {
 table tr:nth-child(even) {
     background: #f1f1f1;
 }
+
+/* ===== SIDEBAR BUTTONS FIX ===== */
+.sidebar ul li button {
+    all: unset;                     /* Remove all browser default styles */
+    display: block;                 /* Fill full width of li */
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #1b5e20 !important; /* Sidebar green background */
+    color: #fff !important;         /* White text */
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.3s;
+}
+
+/* Hover effect */
+.sidebar ul li button:hover {
+    background-color: #388e3c !important; /* Lighter green on hover */
+}
+
+/* Active button */
+.sidebar ul li button.active {
+    background-color: #388e3c !important; /* Green for active button */
+}
+
