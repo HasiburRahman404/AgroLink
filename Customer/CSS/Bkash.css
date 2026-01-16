@@ -1,0 +1,95 @@
+body {
+    background-color: rgba(43, 116, 4, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.payment-wrapper {
+    width: 350px;
+    margin: 40px auto;
+    border: 3px solid #000;
+    background: #fff;
+}
+
+.header {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #e91e63;
+}
+
+.header .bkash {
+    color: #e91e63;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.header .payment {
+    color: #e91e63;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.content {
+    background: #e91e63;
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.terms {
+    font-size: 12px;
+}
+
+.terms a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+}
+
+button {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close {
+    background: #ddd;
+}
+
+.confirm {
+    background: #ccc;
+}
+
+.close:hover {
+    background: #bdbdbd;
+}
+
+.confirm:hover {
+    background: #ab1e54;
+    color: #fff;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    color: #e91e63;
+    font-weight: bold;
+}

@@ -43,7 +43,7 @@
                     CANCEL
                 </button>
 
-                <button type="submit" class="btn next">
+                <button type="button" class="btn next"onclick="window.location.href='Bkash.php'">
                     NEXT
                 </button>
             </div>
