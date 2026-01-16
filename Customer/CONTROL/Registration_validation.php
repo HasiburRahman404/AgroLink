@@ -1,8 +1,8 @@
 <?php
-
+include "../MODEL/database_connection.php";
 $errors = [
     'fullname'   => '',
-    'username'   => '',
+    
     'email'      => '',
     'password'   => '',
     'repassword' => ''
@@ -19,12 +19,12 @@ if (isset($_POST['submit'])) {
 
     
     $fullname   = trim($_POST['fullname']);
-    $username   = trim($_POST['username']);
+    //$username   = trim($_POST['username']);
     $email      = trim($_POST['email']);
     $password   = $_POST['password'];
     $repassword = $_POST['repassword'];
 
-    /*  Full Name  */
+    
     if ($fullname == "") {
     $errors['fullname'] = "Full name is required.";
     } elseif (!preg_match("/^[A-Za-z]+( [A-Za-z]+)+$/", $fullname)) {
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
         $errors['email'] = "Invalid email address.";
     }
 
-    /*  Password  */
+ 
     if ($password == "") {
         $errors['password'] = "Password is required.";
     } elseif (strlen($password) < 8) {
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
         $errors['password'] = "Must include a special character.";
     }
 
-    /*  Retype Password  */
+    
     if ($repassword == "") {
         $errors['repassword'] = "Please retype password.";
     } elseif ($password !== $repassword) {
@@ -69,16 +69,26 @@ if (isset($_POST['submit'])) {
 
     
     if (
-    $errors['fullname'] == "" &&
-    $errors['username'] == "" &&
-    $errors['email'] == "" &&
-    $errors['password'] == "" &&
-    $errors['repassword'] == ""
-) {
-    $success = "Registration Successful!";
-        
-        $fullname = $username = $email = "";
-}
+        $errors['fullname'] == "" &&
+        //$errors['username'] == "" &&
+        $errors['email'] == "" &&
+        $errors['password'] == "" &&
+        $errors['repassword'] == ""
+    ) {
+
+          $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+
+      
+        $sql = "INSERT INTO customer(Name, Email, Password)
+                VALUES ('$fullname', '$email', '$hashPassword')";
+
+        if ($conn->query($sql) === TRUE) {
+            $success = "Registration Successful!";
+            $fullname = $email = $hashPassword= "";
+        } else {
+            $error = "Error: " . $conn->error;
+        }
+    }
 
 }
 ?>
