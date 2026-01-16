@@ -1,25 +1,21 @@
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    if (isset($_POST['payment'])) {
-
-        $payment = $_POST['payment'];
-
-        if ($payment == "bkash") {
-            header("Location: ../home_page.php");
-            exit();
-        }
-
-        if ($payment == "cash") {
-            header("Location: ../delivery_page.php");
-            exit();
-        }
-
-    } else {
-        // Redirect back with error message
-        header("Location: ../VIEW/payment_page.html?error=Please select a payment option!");
+    if (!isset($_POST['payment'])) {
+        header("Location: ../VIEW/Payment_page.php?error=Please select a payment option!");
         exit();
     }
+
+    $payment = $_POST['payment'];
+
+    if ($payment === "bkash") {
+        header("Location: ../VIEW/Bkash.php");
+        exit();
+    } elseif ($payment === "cash") {
+        header("Location: ../VIEW/thanks.php");
+        exit();
+
+        }
 }
-?>
+

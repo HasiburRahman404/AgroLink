@@ -25,7 +25,7 @@
 
     <div class="buttons">
         <button class="close" onclick="window.location.href='home_page.php'">CLOSE</button>
-        <button class="confirm">CONFIRM</button>
+        <button class="confirm"  onclick="window.location.href='thanks.php'">CONFIRM</button>
     </div>
 
     <div class="footer">
