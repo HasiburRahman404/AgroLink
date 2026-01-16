@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <title>Select Payment Option</title>
     <link rel="stylesheet" href="../CSS/Payment_select.css">
 </head>
