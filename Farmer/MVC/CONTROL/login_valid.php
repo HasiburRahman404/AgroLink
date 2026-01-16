@@ -1,10 +1,7 @@
 <?php
 session_start();
 include '../MODEL/Database_conn.php';
-if(isset($_SESSION["email"])){
-    header("Location:admin_dashboard.php");
-    exit();
-}
+
 
 $emailErr = $passwordErr = "";
 $email = "";
@@ -22,38 +19,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $passwordErr = "Password is required";
     }
 
-    if (empty($emailErr) && empty($passwordErr)) {
-        $sql = "SELECT password FROM farmer_information WHERE Email='$email'";
-        $result = $conn->query($sql);
+   
 
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $hashedPassword = $row['password'];
+if (empty($emailErr) && empty($passwordErr)) {
 
-            if (password_verify($password, $hashedPassword)) {
-                
-              // $_SESSION['email'] = $email;
-                foreach($result as $R){
-            $_SESSION["username"]=$R["name"];
-            $_SESSION["email"]=$R["email"];
-            $_SESSION["number"]=$R["phonenumber"];
-            
-            }
-            if(isset($_POST['remember'])){
-                $rem =$_POST['remember'];
-                setcookie("cookie_email",$email,time() + 60*60*24*30,'/');
-                setcookie("cookie_rem",$rem, time() + 60*60*24*30,'/');
-            }
-               
+    $sql = "SELECT * FROM farmer_information WHERE email='$email'";
+    $result = $conn->query($sql);
 
-                header("location:../VIEW/admin_dashboard.php"); 
-                exit();
-            } else {
-                $loginError = "Incorrect password!";
+    if ($result->num_rows === 1) {
+
+        $row = $result->fetch_assoc();
+        $db_password = $row['Password'];
+
+        if (password_verify($password, $db_password)) {
+
+            // Set session values
+            $_SESSION["username"] = $row["name"];
+            $_SESSION["email"]    = $row["email"];
+            $_SESSION["number"]   = $row["phonenumber"];
+
+            // Remember me
+            if (isset($_POST['remember'])) {
+                setcookie("cookie_email", $email, time() + (60 * 60 * 24 * 30), '/');
+                setcookie("cookie_rem", "1", time() + (60 * 60 * 24 * 30), '/');
             }
+
+            header("Location: ../VIEW/admin_dashboard.php");
+            exit();
+
         } else {
-            $loginError = "Email not found!";
+            $loginError = "Incorrect password!";
         }
+
+    } else {
+        $loginError = "Email not found!";
     }
+}
 }
 ?>
