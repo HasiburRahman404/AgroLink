@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    
+     background-color: rgba(43, 116, 4, 0.2);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.page {
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+}
+
+.card {
+    background: #ffffff; 
+    padding: 30px;
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.icon img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #fff1e0;
+}
+
+.option input {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1; 
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+
+.btn.next {
+    background: #e68613;
+    color: white;
+}
+
+.btn.next:hover {
+    background: #cc770f;
+}
+
+.btn.cancel {
+    background: #ccc;
+    color: #333;
+}
+
+.btn.cancel:hover {
+    background: #bbb;
+}
