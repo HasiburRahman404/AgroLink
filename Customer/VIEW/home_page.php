@@ -36,7 +36,7 @@
         <h1>Buy Fresh Direct from Farmers!</h1>
         <p>Connect with local farmers and get the freshest produce at the best prices.</p>
         <br>
-        <a class="btn primary" href="#products">Shop Now</a>
+        <a class="btn primary" href="Login.php">Shop Now</a>
         <a class="btn secondary" href="#sellers">Sell your product</a>
     </div>
 </section>
@@ -79,17 +79,17 @@
     <p class="section-subtitle">Get the best harvest deals from our trusted farmers</p>
 
     <div class="category-grid">
-        <a href="vegetables.php" class="category-card">
+        <a href="Login.php" class="category-card">
             <img src="../images/vegetables.jpg" alt="Vegetables" class="category-img">
             <h4>Vegetables</h4>
         </a>
 
-        <a href="../VIEW/Fruits.php" class="category-card">
+        <a href="Login.php" class="category-card">
             <img src="../images/fruit.jpg" alt="Fruits" class="category-img">
             <h4>Fruits</h4>
         </a>
 
-        <a href="grains.php" class="category-card">
+        <a href="Login.php" class="category-card">
             <img src="../images/cereal-grains.jpg" alt="Grains" class="category-img">
             <h4>Grains</h4>
         </a>
@@ -100,7 +100,7 @@
             <h4>Livestock</h4>
         </a>
 -->
-        <a href="dairy.php" class="category-card">
+        <a href="Login.php" class="category-card">
             <img src="../images/dairy.jpg" alt="Dairy" class="category-img">
             <h4>Dairy</h4>
         </a>
