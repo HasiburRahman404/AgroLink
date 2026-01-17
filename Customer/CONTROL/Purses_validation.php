@@ -1,18 +1,25 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-    $total = $_POST['final_amount'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // 10% discount if amount is more than 1000 Tk
-    if ($total > 1000) {
-        $total = $total - ($total * 0.10);
+    $product = $_POST['product_name'];
+    $price   = (int) $_POST['price'];
+
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
     }
 
-    echo "<h1>Order Successful</h1>";
-    echo "<p>Your payable amount is <strong>$total Tk</strong></p>";
-
-    // এখানে future এ database insert / payment gateway add করতে পারবেন
-} else {
-    echo "Invalid Access";
+    if (isset($_SESSION['cart'][$product])) {
+        $_SESSION['cart'][$product]['qty'] += 1;
+    } else {
+        $_SESSION['cart'][$product] = [
+            'product' => $product,
+            'price'   => $price,
+            'qty'     => 1
+        ];
+    }
 }
 ?>

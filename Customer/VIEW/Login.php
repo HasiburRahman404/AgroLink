@@ -1,4 +1,4 @@
-<?php include "../CONTROL/Login_validation.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,9 +62,8 @@
 </form>
 
         <p class="signup-text">
-        Don’t have an account? <a href="Registration_Create.php">Signup</a>
-       </p>
-
+          Don’t have an account? <a href="#">Signup</a>
+        </p>
       </div>
 
     </div>
