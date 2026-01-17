@@ -11,6 +11,9 @@
     <h2>Reset Your Password</h2>
 
     <form>
+        <label for="text">Full Name</label>
+        <input type="name" id="name" placeholder="Full Name">
+
         <label for="password">New Password</label>
         <input type="password" id="password" placeholder="Enter new password">
 
