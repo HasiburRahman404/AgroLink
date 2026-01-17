@@ -1,15 +1,23 @@
+<?php
+// include validation at the top
+include "../CONTROL/editprofile_valid.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Update Profile - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/farmerprofile.css">
+    <link rel="stylesheet" href="../CSS STYLES/editprofile.css">
+    <style>
+        .error { color: red; font-size: 13px; }
+        .success { color: green; font-size: 14px; }
+    </style>
 </head>
 <body>
 
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
-    <a href="#" class="logout">Logout</a>
+    <a href="farmerlogout.php" class="logout">Logout</a>
 </header>
 
 <div class="layout">
@@ -27,16 +35,25 @@
     <main class="content">
         <h1>✏️ Update Profile</h1>
 
-        <form class="profile-card">
+        <!-- ✅ FORM USED CORRECTLY -->
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="profile-card">
+
+            <?php if (!empty($success)) { ?>
+                <div class="success"><?php echo $success; ?></div>
+            <?php } ?>
 
             <div class="profile-row">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter full name">
+                <input type="text" name="name" placeholder="Enter full name"
+                       value="<?php echo htmlspecialchars($name); ?>">
+                <div class="error"><?php echo $nameErr; ?></div>
             </div>
 
             <div class="profile-row">
                 <label>Phone Number</label>
-                <input type="text" placeholder="Enter phone number">
+                <input type="text" name="phonenumber" placeholder="Enter phone number"
+                       value="<?php echo htmlspecialchars($phonenumber); ?>">
+                <div class="error"><?php echo $phoneErr; ?></div>
             </div>
 
             <button type="submit" class="btn">Update Profile</button>
