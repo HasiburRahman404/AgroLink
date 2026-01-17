@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include "Database_conn.php";
+include "../MODEL/Database_conn.php";
 
 // ===== Initialize variables =====
 $productName = $category = $price = $quantity = $description = $productImage = "";
