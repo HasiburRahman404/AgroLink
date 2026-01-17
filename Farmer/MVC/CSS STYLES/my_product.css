@@ -59,18 +59,14 @@ body {
 .sidebar ul li a {
     display: block;
     padding: 15px 20px;
-    color: #e0f2f1;       /* Text color */
-    text-decoration: none; /* Remove underline */
+    color: #ffffff;            /* FIX: force white text */
+    text-decoration: none;
 }
 
-.sidebar ul li.active a {
-    background: #388e3c;
-    color: #fff;
-}
-
+.sidebar ul li.active a,
 .sidebar ul li a:hover {
     background: #388e3c;
-    color: #fff;
+    color: #ffffff;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -92,14 +88,13 @@ body {
     margin-bottom: 20px;
 }
 
+/* ===== ADD PRODUCT BUTTON ===== */
 .btn {
     background: #2e7d32;
     color: #fff;
     padding: 8px 15px;
-    border: none;
     border-radius: 5px;
     text-decoration: none;
-    margin-left: 5px;
     cursor: pointer;
 }
 
@@ -122,6 +117,7 @@ body {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #eee;
+    vertical-align: middle;   /* FIX: vertical alignment */
 }
 
 .product-table th {
@@ -136,21 +132,17 @@ body {
     border-radius: 5px;
 }
 
-/* ===== ACTION BUTTONS ===== */
-.action-btns button {
-    background: #0288d1;
+/* ===== REMOVE BUTTON (FIXED) ===== */
+.remove-btn {
+    background-color: #d32f2f;
     color: #fff;
     border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 4px;
+    padding: 6px 14px;
     cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
 }
 
-.action-btns button.delete {
-    background: #d32f2f;
-}
-
-.action-btns button:hover {
-    opacity: 0.9;
+.remove-btn:hover {
+    background-color: #b71c1c;
 }
