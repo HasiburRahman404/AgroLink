@@ -22,8 +22,8 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="auth-buttons">
-            <a class="btn" href="#">Login</a>
-            <a class="btn primary" href="#">Sign Up</a>
+            <a class="btn" href="Login.php">Login</a>
+            <a class="btn primary" href="Registration_Create.php">Sign Up</a>
         </div>
     </nav>
 </header>
