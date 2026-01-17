@@ -1,5 +1,4 @@
 <?php
-// Include the validation file
 include '../CONTROL/my_product_valid.php';
 ?>
 
@@ -35,15 +34,22 @@ include '../CONTROL/my_product_valid.php';
     <!-- ===== MAIN CONTENT ===== -->
     <main class="content">
 
-        <!-- HEADER + DISCOUNT INPUT -->
+        <!-- HEADER + DISCOUNT + SEARCH -->
         <div class="my-products-header">
             <h1>My Products</h1>
 
             <div style="display: flex; gap: 10px; align-items: center;">
+
                 <!-- Discount Form -->
                 <form method="post" action="my_products.php" style="display: flex; gap: 10px;">
                     <input type="number" name="discount" placeholder="Discount %" min="1" max="90" required>
                     <button type="submit" name="apply_discount" class="btn">Discount</button>
+                </form>
+
+                <!-- Search Form -->
+                <form method="post" action="my_products.php" style="display: flex; gap: 5px;">
+                    <input type="text" name="search" placeholder="Search Product" value="<?= htmlspecialchars($searchTerm) ?>" required>
+                    <button type="submit" name="search_product" class="btn">Search</button>
                 </form>
 
                 <!-- Add Product Button -->

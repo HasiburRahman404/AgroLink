@@ -7,7 +7,8 @@ include "../CONTROL/editprofile_valid.php";
 <head>
     <meta charset="UTF-8">
     <title>Update Profile - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/editprofile.css">
+   <link rel="stylesheet" href="../CSS%20STYLES/editprofile.css">
+
     <style>
         .error { color: red; font-size: 13px; }
         .success { color: green; font-size: 14px; }

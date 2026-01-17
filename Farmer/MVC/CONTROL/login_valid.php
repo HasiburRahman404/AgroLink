@@ -34,9 +34,9 @@ if (empty($emailErr) && empty($passwordErr)) {
         if (password_verify($password, $db_password)) {
 
             // Set session values
-            $_SESSION["username"] = $row["name"];
-            $_SESSION["email"]    = $row["email"];
-            $_SESSION["number"]   = $row["phonenumber"];
+            $_SESSION["username"] = $row["UserName"];
+            $_SESSION["email"]    = $row["Email"];
+            $_SESSION["number"]   = $row["PhoneNumber"];
 
             // Remember me
             if (isset($_POST['remember'])) {

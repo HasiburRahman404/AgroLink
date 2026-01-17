@@ -20,3 +20,11 @@
 .btn:hover {
     background: #1b5e20;
 }
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
+    padding: 30px;
+}
+

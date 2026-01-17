@@ -37,7 +37,7 @@ include '../CONTROL/login_valid.php';
 
             ?>
 
-            <!-- Form submits to itself -->
+            
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <label>Email</label>
                 <input type="email" name="email" value="<?php echo $disp_email; ?>">

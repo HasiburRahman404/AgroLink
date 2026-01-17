@@ -1,14 +1,11 @@
 <?php
 session_start();
-
-// Include database connection
 include "../MODEL/Database_conn.php";
 
 /* ===============================
    APPLY DISCOUNT TO ALL PRODUCTS
 ================================ */
 if (isset($_POST['apply_discount'])) {
-
     $discount = (int) $_POST['discount'];
 
     if ($discount > 0 && $discount < 100) {
@@ -25,9 +22,7 @@ if (isset($_POST['apply_discount'])) {
    REMOVE PRODUCT
 ================================ */
 if (isset($_POST['remove_product'])) {
-
     $productName = $_POST['product_name'];
-
     $deleteSql = "DELETE FROM products WHERE ProductName = '$productName'";
     $conn->query($deleteSql);
 
@@ -36,8 +31,15 @@ if (isset($_POST['remove_product'])) {
 }
 
 /* ===============================
-   FETCH ALL PRODUCTS
+   SEARCH PRODUCTS
 ================================ */
-$sql = "SELECT * FROM products";
+$searchTerm = '';
+if (isset($_POST['search_product'])) {
+    $searchTerm = trim($_POST['search']);
+    $sql = "SELECT * FROM products WHERE ProductName LIKE '%$searchTerm%'";
+} else {
+    $sql = "SELECT * FROM products";
+}
+
 $result = $conn->query($sql);
 ?>

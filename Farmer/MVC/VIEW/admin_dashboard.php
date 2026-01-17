@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["email"])) {
+    header("Location: ../VIEW/login.php");
+    exit();
+} 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +32,7 @@
         <li><button onclick="location.href='orders.php'">Orders</button></li>
         <li><button onclick="location.href='add_product.php'">Add Porducts</button></li>
         <li><button onclick="location.href='farmers_help.php'">Farmers Help</button></li>
-        <li><button onclick="location.href='profile.php'">Profile</button></li>
+        <li><button onclick="location.href='farmerprofile.php'">Profile</button></li>
     </ul>
 </aside>
 
