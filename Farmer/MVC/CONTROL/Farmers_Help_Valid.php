@@ -1,6 +1,5 @@
 <?php
-// Include database connection (your previous format)
-include "../MODEL/Database_conn.php"; // make sure this file defines $conn
+include "../MODEL/Database_conn.php"; // $conn
 
 // ===== INITIALIZE VARIABLES =====
 $email = $problem = "";
@@ -25,13 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $problemErr = "Problem description is required";
     } else {
         $problem = htmlspecialchars(trim($_POST["problem"]));
-        
     }
 
     // ---------- Insert into Database ----------
     if (empty($emailErr) && empty($problemErr)) {
 
-        // Escape input for safety
         $email_db = $conn->real_escape_string($email);
         $problem_db = $conn->real_escape_string($problem);
 
@@ -40,11 +37,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             $success = "Problem submitted successfully!";
-            // Clear form fields
             $email = $problem = "";
         } else {
             $error = "Error: " . $conn->error;
         }
     }
+}
+
+// ===== FETCH ALL PROBLEMS =====
+$allProblems = [];
+$sql_fetch = "SELECT * FROM farmers_help"; // fetch all
+$result = $conn->query($sql_fetch);
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $allProblems[] = $row;
+    }
+} else {
+    $error = "Error fetching problems: " . $conn->error;
 }
 ?>
