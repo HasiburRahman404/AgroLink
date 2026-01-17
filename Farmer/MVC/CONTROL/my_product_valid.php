@@ -1,20 +1,37 @@
 <?php
+session_start();
+
 // Include database connection
 include "../MODEL/Database_conn.php";
 
 /* ===============================
-   REMOVE PRODUCT LOGIC
+   APPLY DISCOUNT TO ALL PRODUCTS
+================================ */
+if (isset($_POST['apply_discount'])) {
+
+    $discount = (int) $_POST['discount'];
+
+    if ($discount > 0 && $discount < 100) {
+        $updateSql = "UPDATE products
+                      SET Price = Price - (Price * $discount / 100)";
+        $conn->query($updateSql);
+
+        header("Location: ../VIEW/my_products.php");
+        exit();
+    }
+}
+
+/* ===============================
+   REMOVE PRODUCT
 ================================ */
 if (isset($_POST['remove_product'])) {
 
     $productName = $_POST['product_name'];
 
-    // Delete product (previous format)
     $deleteSql = "DELETE FROM products WHERE ProductName = '$productName'";
     $conn->query($deleteSql);
 
-    // Reload page
-    header("Location: my_products.php");
+    header("Location: ../VIEW/my_products.php");
     exit();
 }
 

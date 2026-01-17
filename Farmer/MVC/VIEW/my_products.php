@@ -1,8 +1,5 @@
 <?php
-// Always start session if validation uses it
-session_start();
-
-// Include validation / logic file
+// Include the validation file
 include '../CONTROL/my_product_valid.php';
 ?>
 
@@ -11,9 +8,7 @@ include '../CONTROL/my_product_valid.php';
 <head>
     <meta charset="UTF-8">
     <title>My Products - AgroLink Farmer</title>
-
-    <!-- FIXED CSS PATH -->
-    <link rel="stylesheet" href="../CSS STYLES/my_product.css">
+    <link rel="stylesheet" href="../CSS%20STYLES/my_product.css">
 </head>
 <body>
 
@@ -40,11 +35,23 @@ include '../CONTROL/my_product_valid.php';
     <!-- ===== MAIN CONTENT ===== -->
     <main class="content">
 
+        <!-- HEADER + DISCOUNT INPUT -->
         <div class="my-products-header">
             <h1>My Products</h1>
-            <a href="add_product_farmer.php" class="btn">Add Product</a>
+
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <!-- Discount Form -->
+                <form method="post" action="my_products.php" style="display: flex; gap: 10px;">
+                    <input type="number" name="discount" placeholder="Discount %" min="1" max="90" required>
+                    <button type="submit" name="apply_discount" class="btn">Discount</button>
+                </form>
+
+                <!-- Add Product Button -->
+                <a href="add_product_farmer.php" class="btn">Add Product</a>
+            </div>
         </div>
 
+        <!-- PRODUCTS TABLE -->
         <table class="product-table">
             <thead>
                 <tr>
@@ -67,7 +74,6 @@ include '../CONTROL/my_product_valid.php';
                         <td><?= htmlspecialchars($row['Price']) ?></td>
                         <td><?= htmlspecialchars($row['Quantity']) ?></td>
                         <td><?= htmlspecialchars($row['Description']) ?></td>
-
                         <td>
                             <?php if (!empty($row['Image'])): ?>
                                 <img src="uploads/<?= htmlspecialchars($row['Image']) ?>" alt="Product Image">
@@ -75,23 +81,17 @@ include '../CONTROL/my_product_valid.php';
                                 N/A
                             <?php endif; ?>
                         </td>
-
                         <td>
                             <form method="post" action="my_products.php">
-                                <input type="hidden" name="product_name"
-                                       value="<?= htmlspecialchars($row['ProductName']) ?>">
-                                <button type="submit" name="remove_product" class="remove-btn">
-                                    Remove
-                                </button>
+                                <input type="hidden" name="product_name" value="<?= htmlspecialchars($row['ProductName']) ?>">
+                                <button type="submit" name="remove_product" class="remove-btn">Remove</button>
                             </form>
                         </td>
                     </tr>
                 <?php endwhile; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="7" style="text-align:center;">
-                        No products added yet.
-                    </td>
+                    <td colspan="7" style="text-align:center;">No products added yet.</td>
                 </tr>
             <?php endif; ?>
             </tbody>
