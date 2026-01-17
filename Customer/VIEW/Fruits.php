@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- Top Header -->
+
 <header class="top-header">
     <div class="logo">
         <img src="../images/logo.jpg" alt="AgroLink Logo">
@@ -23,7 +23,7 @@
 <nav class="nav-bar">
 
  <div class="nav-links">
-   <!-- Using inline onclick -->
+   
 <button class="verify-btn" onclick="window.location.href='../VIEW/home_page.php'">Home</button>
 
     <button class="verify-btn">Products</button>
@@ -45,15 +45,15 @@
 <!-- Main Content -->
 <div class="container">
 
-    <!-- Sidebar -->
+    
     <aside class="sidebar">
         <h3>Categories</h3>
         <ul>
             <li> <button onclick="location.href='vegetable.php'" class="verify-btn">
         Vegetable
     </button></li>
-            <li>Dairy</li>
-            <li>Grains</li>
+            <li><button onclick="location.href='Dairy.php'" class="verify-btn">Dairy</li></button>
+            <li><button onclick="location.href='Grains.php'" class="verify-btn">Grains</li></button>
         </ul>
     </aside>
 
