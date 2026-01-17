@@ -7,11 +7,10 @@ include '../CONTROL/my_product_valid.php';
 <head>
     <meta charset="UTF-8">
     <title>My Products - AgroLink Farmer</title>
-    <link rel="stylesheet" href="../CSS%20STYLES/my_product.css">
+    <link rel="stylesheet" href="../CSSSTYLES/my_product.css">
 </head>
 <body>
 
-<!-- ===== TOPBAR ===== -->
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
     <a href="../CONTROL/farmerlogout.php" class="logout">Logout</a>
@@ -19,45 +18,47 @@ include '../CONTROL/my_product_valid.php';
 
 <div class="container">
 
-    <!-- ===== SIDEBAR ===== -->
+    
     <aside class="sidebar">
         <ul>
-            <li><a href="farmer_dashboard.php">Dashboard</a></li>
-            <li><a href="add_product_farmer.php">Add Product</a></li>
-            <li class="active"><a href="my_products.php">My Products</a></li>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
+            <li><a href="farmerprofile.php">Profile</a></li>
+             <li class="active"><a href="my_products.php">My Products</a></li>
+            <li><a href="add_product.php">Add Product</a></li>
+            <li><a href="Farmers_help.php">Farmers Help</a></li>
             <li><a href="orders.php">Orders</a></li>
             <li><a href="earnings.php">Earnings</a></li>
-            <li><a href="profile.php">Profile</a></li>
+           
         </ul>
     </aside>
 
-    <!-- ===== MAIN CONTENT ===== -->
+   
     <main class="content">
 
-        <!-- HEADER + DISCOUNT + SEARCH -->
+       
         <div class="my-products-header">
             <h1>My Products</h1>
 
             <div style="display: flex; gap: 10px; align-items: center;">
 
-                <!-- Discount Form -->
+                
                 <form method="post" action="my_products.php" style="display: flex; gap: 10px;">
                     <input type="number" name="discount" placeholder="Discount %" min="1" max="90" required>
                     <button type="submit" name="apply_discount" class="btn">Discount</button>
                 </form>
 
-                <!-- Search Form -->
+                
                 <form method="post" action="my_products.php" style="display: flex; gap: 5px;">
                     <input type="text" name="search" placeholder="Search Product" value="<?= htmlspecialchars($searchTerm) ?>" required>
                     <button type="submit" name="search_product" class="btn">Search</button>
                 </form>
 
-                <!-- Add Product Button -->
-                <a href="add_product_farmer.php" class="btn">Add Product</a>
+                
+                <a href="add_product.php" class="btn">Add Product</a>
             </div>
         </div>
 
-        <!-- PRODUCTS TABLE -->
+       
         <table class="product-table">
             <thead>
                 <tr>

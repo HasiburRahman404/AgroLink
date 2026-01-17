@@ -1,5 +1,5 @@
 <?php
-// include validation at the top
+
 include "../CONTROL/editprofile_valid.php";
 ?>
 <!DOCTYPE html>
@@ -7,8 +7,7 @@ include "../CONTROL/editprofile_valid.php";
 <head>
     <meta charset="UTF-8">
     <title>Update Profile - AgroLink</title>
-   <link rel="stylesheet" href="../CSS%20STYLES/editprofile.css">
-
+    <link rel="stylesheet" href="../CSSSTYLES/editprofile.css">
     <style>
         .error { color: red; font-size: 13px; }
         .success { color: green; font-size: 14px; }
@@ -25,18 +24,20 @@ include "../CONTROL/editprofile_valid.php";
 
     <aside class="sidebar">
         <ul>
-            <li>Dashboard</li>
-            <li>My Products</li>
-            <li>Orders</li>
-            <li>Farmers Help</li>
-            <li class="active">Update Profile</li>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
+            <li><a href="farmerprofile.php">Profile</a></li>
+             <li class="active"><a href="my_products.php">My Products</a></li>
+            <li><a href="add_product.php">Add Product</a></li>
+            <li><a href="Farmers_help.php">Farmers Help</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="earnings.php">Earnings</a></li>
         </ul>
     </aside>
 
     <main class="content">
-        <h1>✏️ Update Profile</h1>
+        <h1> Update Profile</h1>
 
-        <!-- ✅ FORM USED CORRECTLY -->
+      
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="profile-card">
 
             <?php if (!empty($success)) { ?>

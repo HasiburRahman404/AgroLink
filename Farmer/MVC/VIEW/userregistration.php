@@ -1,5 +1,5 @@
 <?php
-// Include validation at the very top
+
 include 'register_valid.php';
 ?>
 
@@ -7,7 +7,7 @@ include 'register_valid.php';
 <html>
 <head>
     <title>Customer Registration - AgroLink</title>
-    <link rel="stylesheet" href="userregistration.css">
+    <link rel="stylesheet" href="../CSSSTYLES/userregistration.css">
     <style>
         .error { color: red; font-size: 0.9em; }
     </style>

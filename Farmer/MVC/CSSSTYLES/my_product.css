@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     background: #f4f6f8;
 }
 
-/* ===== TOPBAR ===== */
+
 .topbar {
     background: #2e7d32;
     color: #fff;
@@ -36,13 +36,13 @@ body {
     font-size: 14px;
 }
 
-/* ===== CONTAINER ===== */
+
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* ===== SIDEBAR ===== */
+
 .sidebar {
     width: 220px;
     background: #1b5e20;
@@ -69,7 +69,7 @@ body {
     color: #ffffff;
 }
 
-/* ===== MAIN CONTENT ===== */
+
 .content {
     flex: 1;
     padding: 25px;
@@ -80,7 +80,7 @@ body {
     color: #333;
 }
 
-/* ===== HEADER ABOVE TABLE ===== */
+
 .my-products-header {
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ===== INPUTS ===== */
+
 .my-products-header input[name="discount"],
 .my-products-header input[name="search"] {
     padding: 8px 12px;
@@ -98,7 +98,7 @@ body {
     font-size: 14px;
 }
 
-/* ===== BUTTONS ===== */
+
 .my-products-header button,
 .my-products-header .btn {
     padding: 8px 16px;
@@ -115,7 +115,6 @@ body {
     background: #1b5e20;
 }
 
-/* ===== TABLE ===== */
 .product-table {
     width: 100%;
     border-collapse: collapse;
@@ -145,7 +144,7 @@ body {
     border-radius: 5px;
 }
 
-/* ===== REMOVE BUTTON ===== */
+
 .remove-btn {
     background-color: #d32f2f;
     color: #fff;

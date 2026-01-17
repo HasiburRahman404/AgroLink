@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Forget Password - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/Forget_password.css">
+    <link rel="stylesheet" href="../CSSSTYLES/Forget_password.css">
     <style>
         .error { color: red; font-size: 13px; margin-top: 3px; }
         .success { color: green; font-size: 14px; margin-top: 5px; }
@@ -15,7 +13,7 @@
 
 <div class="login-page">
 
-    <!-- LEFT GREEN SECTION -->
+   
     <div class="left-panel">
         <div class="logo-container">
             <img src="../images/logo.png" alt="AgroLink Logo" class="logo">
@@ -24,12 +22,12 @@
         <p>Connecting Farmers and Customers</p>
     </div>
 
-    <!-- RIGHT FORGET PASSWORD SECTION -->
+    
     <div class="right-panel">
         <div class="container">
             <h2>Reset Password</h2>
 
-            <!-- Include validation file -->
+           
             <?php include '../CONTROL/forget_password_valid.php'; ?>
 
             <form method="post" action="">

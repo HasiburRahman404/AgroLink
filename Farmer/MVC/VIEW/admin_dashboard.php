@@ -11,38 +11,39 @@ if (!isset($_SESSION["email"])) {
 <head>
     <meta charset="UTF-8">
     <title>Farmer Dashboard - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/admin_dashboard.css">
+    <link rel="stylesheet" href="../CSSSTYLES/admin_dashboard.css">
 </head>
 <body>
 
-<!-- ===== TOP NAVBAR ===== -->
+
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
     <a href="../CONTROL/farmerlogout.php" class="logout">Logout</a>
 </header>
 
-<!-- ===== MAIN CONTAINER ===== -->
+
 <div class="container">
 
-    <!-- ===== SIDEBAR ===== -->
+   
 <aside class="sidebar">
     <ul>
-        <li><button onclick="location.href='dashboard.php'" class="active">Dashboard</button></li>
-        <li><button onclick="location.href='my_products.php'">My Products</button></li>
-        <li><button onclick="location.href='orders.php'">Orders</button></li>
-        <li><button onclick="location.href='add_product.php'">Add Porducts</button></li>
-        <li><button onclick="location.href='farmers_help.php'">Farmers Help</button></li>
-        <li><button onclick="location.href='farmerprofile.php'">Profile</button></li>
+       <li><a href="admin_dashboard.php">Dashboard</a></li>
+            <li><a href="farmerprofile.php">Profile</a></li>
+             <li class="active"><a href="my_products.php">My Products</a></li>
+            <li><a href="add_product.php">Add Product</a></li>
+            <li><a href="Farmers_help.php">Farmers Help</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="earnings.php">Earnings</a></li>
     </ul>
 </aside>
 
 
-    <!-- ===== MAIN CONTENT ===== -->
+    
     <main class="content">
 
         <h1>Farmer Dashboard</h1>
 
-        <!-- INFO CARDS -->
+        
         <div class="cards">
             <div class="card">
                 <h2>15</h2>
@@ -58,7 +59,7 @@ if (!isset($_SESSION["email"])) {
             </div>
         </div>
 
-        <!-- RECENT ORDERS -->
+        
         <div class="table-box">
             <h2>Recent Orders</h2>
             <table>

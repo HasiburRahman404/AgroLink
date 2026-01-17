@@ -11,11 +11,11 @@ if (!isset($_SESSION["email"])) {
 <head>
     <meta charset="UTF-8">
     <title>Farmer Profile - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/farmerprofile.css">
+    <link rel="stylesheet" href="../CSSSTYLES/farmerprofile.css">
 </head>
 <body>
 
-<!-- ===== TOPBAR ===== -->
+
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
     <a href="../CONTROL/farmerlogout.php" class="logout">Logout</a>
@@ -23,21 +23,23 @@ if (!isset($_SESSION["email"])) {
 
 <div class="layout">
 
-    <!-- ===== SIDEBAR ===== -->
+  
     <aside class="sidebar">
         <ul>
-            <li onclick="location.href='admin_dashboard.php'">Dashboard</li>
-            <li onclick="location.href='my_products.php'">My Products</li>
-            <li onclick="location.href='orders.php'">Orders</li>
-            <li onclick="location.href='farmers_help.php'">Farmers Help</li>
-            <li class="active">Profile</li>
+           <li><a href="admin_dashboard.php">Dashboard</a></li>
+            <li><a href="farmerprofile.php">Profile</a></li>
+             <li class="active"><a href="my_products.php">My Products</a></li>
+            <li><a href="add_product.php">Add Product</a></li>
+            <li><a href="Farmers_help.php">Farmers Help</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="earnings.php">Earnings</a></li>
         </ul>
     </aside>
 
-    <!-- ===== MAIN CONTENT ===== -->
+  
     <main class="content">
         <div class="profile-wrapper">
-            <h1>👤 My Profile</h1>
+            <h1> My Profile</h1>
 
             <div class="profile-card">
                 <div class="profile-row">

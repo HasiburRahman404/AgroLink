@@ -7,7 +7,7 @@ include '../CONTROL/Farmers_Help_Valid.php';
 <head>
     <meta charset="UTF-8">
     <title>Farmer Help Hub - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/Farmers_Help.css">
+    <link rel="stylesheet" href="../CSSSTYLES/Farmers_Help.css">
     <style>
         .error { color: red; font-size: 13px; }
         .success { color: green; font-size: 14px; margin-bottom: 10px; }
@@ -24,12 +24,13 @@ include '../CONTROL/Farmers_Help_Valid.php';
 
     <aside class="sidebar">
         <ul>
-            <li>Dashboard</li>
-            <li class="active">Farmer Help Hub</li>
-            <li>My Products</li>
-            <li>Orders</li>
-            <li>Earnings</li>
-            <li>Profile</li>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
+            <li><a href="farmerprofile.php">Profile</a></li>
+             <li class="active"><a href="my_products.php">My Products</a></li>
+            <li><a href="add_product.php">Add Product</a></li>
+            <li><a href="Farmers_help.php">Farmers Help</a></li>
+            <li><a href="orders.php">Orders</a></li>
+            <li><a href="earnings.php">Earnings</a></li>
         </ul>
     </aside>
 

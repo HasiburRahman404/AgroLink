@@ -1,6 +1,6 @@
 <?php
 
-// Include the validation file at the very top
+
 include '../CONTROL/login_valid.php';
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include '../CONTROL/login_valid.php';
 <head>
     <meta charset="UTF-8">
     <title>Customer Login - AgroLink</title>
-    <link rel="stylesheet" href="../CSS STYLES/login.css">
+    <link rel="stylesheet" href="../CSSSTYLES/login.css">
     <style>
         .error { color: red; font-size: 13px; margin-top: 3px; }
     </style>
@@ -17,7 +17,7 @@ include '../CONTROL/login_valid.php';
 
 <div class="login-page">
 
-    <!-- LEFT GREEN SECTION -->
+  
     <div class="left-panel">
         <div class="logo-container">
             <img src="../images/logo.png" alt="AgroLink Logo" class="logo">
@@ -26,7 +26,7 @@ include '../CONTROL/login_valid.php';
         <p>Connecting Farmers and Customers</p>
     </div>
 
-    <!-- RIGHT LOGIN SECTION -->
+   
     <div class="right-panel">
         <div class="container">
             <h2>Login</h2>
