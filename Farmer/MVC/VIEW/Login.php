@@ -1,4 +1,5 @@
 <?php
+
 // Include the validation file at the very top
 include '../CONTROL/login_valid.php';
 ?>
