@@ -18,6 +18,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -37,12 +42,15 @@ body {
 /* ===== LAYOUT ===== */
 .container {
     display: flex;
+    margin-top: 60px;
 }
 
 .sidebar {
     width: 220px;
     background: #1b5e20;
-    min-height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    bottom: 0;
 }
 
 .sidebar ul {
@@ -51,8 +59,12 @@ body {
 
 .sidebar ul li {
     padding: 15px 20px;
+}
+
+.sidebar ul li a {
     color: #e0f2f1;
-    cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 
 .sidebar ul li.active,
@@ -60,9 +72,11 @@ body {
     background: #388e3c;
 }
 
+/* ===== MAIN CONTENT ===== */
 .content {
     flex: 1;
     padding: 25px;
+    margin-left: 220px;
 }
 
 /* ===== HELP FORM ===== */
@@ -70,7 +84,7 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .help-form label {
@@ -94,6 +108,7 @@ body {
     color: #fff;
     padding: 10px 15px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -101,4 +116,76 @@ body {
     background: #1b5e20;
 }
 
+.error { color: red; font-size: 13px; }
+.success { color: green; font-size: 14px; margin-bottom: 10px; }
 
+/* ===== SHOW PROBLEMS BUTTON ===== */
+.problems-header {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.problems-header h2 {
+    color: #2e7d32;
+}
+
+.show-btn {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-btn:hover {
+    background: #1b5e20;
+}
+
+/* ===== TABLE ===== */
+#problemsArea table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#problemsArea th, #problemsArea td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#problemsArea th {
+    background: #2e7d32;
+    color: #fff;
+    font-weight: bold;
+}
+
+#problemsArea tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+#problemsArea tr:hover {
+    background: #e8f5e9;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .sidebar { width: 180px; }
+    .content { margin-left: 180px; }
+}
+
+@media (max-width: 480px) {
+    .sidebar { display: none; }
+    .content { margin-left: 0; }
+}
