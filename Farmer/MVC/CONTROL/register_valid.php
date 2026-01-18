@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include "Database_conn.php"; // your previous connection format
+include "../MODEL/Database_conn.php"; // your previous connection format
 
 // Initialize variables
 $name = $email = $phonenumber = $password = $confirmpassword = "";
