@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     
     <title>AgroLink</title>
-    <link rel="stylesheet" href="../CSS/fruits.css">
+    <link rel="stylesheet" href="../CSS/Grains.css">
 </head>
 <body>
 
-
+<!-- Top Header -->
 <header class="top-header">
     <div class="logo">
         <img src="../images/logo.jpg" alt="AgroLink Logo">
@@ -23,7 +24,7 @@
 <nav class="nav-bar">
 
  <div class="nav-links">
-   
+   <!-- Using inline onclick -->
 <button class="verify-btn" onclick="window.location.href='../VIEW/home_page.php'">Home</button>
 
     <button class="verify-btn">Products</button>
@@ -45,30 +46,36 @@
 <!-- Main Content -->
 <div class="container">
 
-    
+    <!-- Sidebar -->
     <aside class="sidebar">
         <h3>Categories</h3>
         <ul>
-            <li> <button onclick="location.href='vegetable.php'" class="verify-btn">
+            <li>
+    <button onclick="location.href='Vegetable.php'" class="verify-btn">
         Vegetable
-    </button></li>
-            <li><button onclick="location.href='Dairy.php'" class="verify-btn">Dairy</li></button>
-            <li><button onclick="location.href='Grains.php'" class="verify-btn">Grains</li></button>
+    </button>
+</li>
+
+            <li><button onclick="location.href='Fruits.php'" class="verify-btn">fruits</li>
+</button>
+            <li><button onclick="location.href='Dairy.php'" class="verify-btn">Dairy</li>
+</button>
         </ul>
     </aside>
 
     <!-- Products Section -->
     <main class="products-section">
         <h1>Shop</h1>
-        <h2 class="tagline">Nurturing Nature, Feeding the World.</h2>
-<div class="products-grid">
+        <h2 class="tagline">Authentic grains, traditional flavor, true nutrition</h2>
+
+        <div class="products-grid">
 
     <!-- Product 1 -->
     <div class="product-card">
         <span class="sale">Sale</span>
-        <img src="../images/coconut.jpg" alt="Coconut">
-        <p class="category">Coconuts</p>
-        <h4>Best Quality Coconut for Wholesale</h4>
+        <img src="../images/Pusti-atta.jpg" alt="Pusti atta">
+        <p class="category">Pusti atta</p>
+        <h4>Pusti atta</h4>
         <p class="price"><del>90.00৳</del> 85.00৳</p>
 
         <form action="Purses.php" method="POST">
@@ -81,9 +88,9 @@
     <!-- Product 2 -->
     <div class="product-card">
         <span class="sale">Sale</span>
-        <img src="../images/apple1.jpg" alt="Apple">
-        <p class="category">Apple</p>
-        <h4>Apple Price</h4>
+        <img src="../images/Yellow Mustard.jpg" alt="Yellow Mustard">
+        <p class="category">Yellow Mustard</p>
+        <h4>Yellow Mustard</h4>
         <p class="price"><del>280.00৳</del> 255.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
@@ -93,27 +100,14 @@
         </form>
     </div>
 
-    <!-- Product 3 -->
-    <div class="product-card">
-        <span class="sale">Sale</span>
-        <img src="../images/banana1.jpg" alt="Banana">
-        <p class="category">Banana</p>
-        <h4>Banana</h4>
-        <p class="price"><del>50.00৳</del> 40.00৳/dozon</p>
-
-        <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Banana">
-            <input type="hidden" name="price" value="40">
-            <button type="submit">Add to Cart</button>
-        </form>
-    </div>
+    
 
     <!-- Product 4 -->
     <div class="product-card">
         <span class="sale">Sale</span>
-        <img src="../images/watermelon.jpg" alt="Watermelon">
-        <p class="category">Watermelon</p>
-        <h4>Watermelon</h4>
+        <img src="../images/Pran-Moshur-Dal.jpg" alt="Pran Moshur Dal">
+        <p class="category">Pran Moshur Dal</p>
+        <h4>Pran Moshur Dal</h4>
         <p class="price"><del>165.00৳</del> 160.00৳</p>
 
         <form action="Purses.php" method="POST">
@@ -126,9 +120,9 @@
     <!-- Product 5 -->
     <div class="product-card">
         <span class="sale">Sale</span>
-        <img src="../images/Orange.jpg" alt="Orange">
-        <p class="category">Orange</p>
-        <h4>Orange</h4>
+        <img src="../images/Basic Spices.jpg" alt="Basic Spices">
+        <p class="category">Basic Spices</p>
+        <h4>Basic Spices</h4>
         <p class="price"><del>265.00৳</del> 260.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
@@ -138,42 +132,13 @@
         </form>
     </div>
 
-    <!-- Product 6 -->
+    
+
     <div class="product-card">
         <span class="sale">Sale</span>
-        <img src="../images/Pai2.jpg" alt="Pineapple">
-        <p class="category">Pineapple</p>
-        <h4>Pineapple</h4>
-        <p class="price"><del>65.00৳</del> 60.00৳/kg</p>
-
-        <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Pineapple">
-            <input type="hidden" name="price" value="60">
-            <button type="submit">Add to Cart</button>
-        </form>
-    </div>
-
-    <!-- Product 7 -->
-    <div class="product-card">
-        <span class="sale">Sale</span>
-        <img src="../images/Mango.jpg" alt="Mango">
-        <p class="category">Mango</p>
-        <h4>Mango</h4>
-        <p class="price"><del>265.00৳</del> 260.00৳/kg</p>
-
-        <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Mango">
-            <input type="hidden" name="price" value="260">
-            <button type="submit">Add to Cart</button>
-        </form>
-    </div>
-
-    <!-- Product 8 -->
-    <div class="product-card">
-        <span class="sale">Sale</span>
-        <img src="../images/Guava1.jpg" alt="Guava">
-        <p class="category">Guava</p>
-        <h4>Guava</h4>
+        <img src="../images/Katari-Atop-Rice.jpg" alt="Katari Atop Rice">
+        <p class="category">Katari Atop Rice</p>
+        <h4>Katari Atop Rice</h4>
         <p class="price"><del>95.00৳</del> 85.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
@@ -182,6 +147,8 @@
             <button type="submit">Add to Cart</button>
         </form>
     </div>
+
+    
 
 </div>
 

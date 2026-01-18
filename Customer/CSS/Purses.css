@@ -1,35 +1,86 @@
+
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;       
+    display: flex;
+    flex-direction: column;  
     font-family: Arial, sans-serif;
     background: #dff4d6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 70px;       
 }
 
-/* outer border box */
+
+.top-header {
+    background: #a8eda8;
+    color: green;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 96.5%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;           
+    background: transparent;    
+}
+
+.logo img {
+    height: 40px;        
+    width: auto;         
+    display: block;
+    background: transparent;    
+}
+
+.header-icons span {
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    position: relative; 
+}
+
+.header-icons span:hover {
+    text-shadow: 0 0 15px green, 0 0 30px green, 0 0 45px green;
+}
+
+
+.main-content {
+    flex: 1;                    
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    padding: 20px;
+}
+
+
 .cart-wrapper {
     padding: 25px;
     border: 2px solid #0a2f3d;
     background: #dff4d6;
 }
 
-/* cart card */
+
 .cart-container {
     width: 420px;
     background: #8ed973;
     padding: 25px;
 }
 
-/* heading */
+
 .cart-container h2 {
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: bold;
 }
 
-/* table */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -45,14 +96,7 @@ td {
     padding: 4px 0;
 }
 
-/* quantity cell */
-.qty-cell {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
-/* buttons */
 .qty-btn {
     border: none;
     background: none;
@@ -61,29 +105,139 @@ td {
     font-weight: bold;
 }
 
-.remove-btn {
-    font-size: 18px;
-    cursor: pointer;
-    margin-left: 5px;
-}
 
-/* totals */
+
 .row-total,
 #grandTotal {
     text-align: right;
 }
 
-/* grand row */
+
 .grand td {
     padding-top: 10px;
     font-weight: bold;
 }
 
-/* continue shopping */
-.back-btn {
-    display: block;
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px; 
     margin-top: 20px;
-    color: blue;
-    font-weight: bold;
+}
+
+.action-btn {
+    padding: 10px 16px;
+    background: #0a2f3d;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #145a72;
+}
+
+.pay-btn {
+    background: #1e7e34;
+}
+
+.pay-btn:hover {
+    background: #155d27;
+}
+
+
+.contact {
+    background-color: #145214;  
+    color: #ffffff;             
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.contact h2 {
+    color: #ffffff; 
+    margin-bottom: 1rem;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #d4edda;  
+    color: #145214;            
+    padding: 1rem 1rem;
+    font-weight: bold;
+}
+
+
+body > .contact,
+body > footer {
+    margin-top: auto;  
+}
+
+.page-wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+}
+
+
+.review-wrapper {
+    background: #dff4d6;
+    padding: 20px;
+    border: 2px solid #f2a7d6; 
+}
+
+.review-box {
+    width: 520px;
+    height: 360px;
+    background: #8ed973;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    position: relative;
+}
+
+.review-text {
+    text-align: center;
+    font-size: 22px;
+    color: rgb(158, 22, 22);
+    margin-top: 80px;
+}
+
+
+
+.review-divider {
+    height: 2px;
+    background: #2c6f2c;
+    width: 100%;
+}
+
+
+.review-btn {
+    align-self: center;
+    padding: 12px 40px;
+    font-size: 18px;
+    background: transparent;
+    border: 2px solid #0a2f3d;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.review-btn:hover {
+    background: #0a2f3d;
+    color: rgb(255, 255, 255);
+}
+
+.review-textarea {
+    width: 100%;
+    height: 180px; 
+    color: #18900b;        
+    resize: none;
+    padding: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: auto;       
 }
