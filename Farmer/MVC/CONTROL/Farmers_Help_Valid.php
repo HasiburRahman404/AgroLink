@@ -1,58 +1,43 @@
 <?php
-include "../MODEL/Database_conn.php"; // $conn
+include "../MODEL/Database_conn.php";
 
-// ===== INITIALIZE VARIABLES =====
 $email = $problem = "";
 $emailErr = $problemErr = "";
 $success = $error = "";
 
-// ===== FORM SUBMISSION =====
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit_problem"])) {
 
-    // ---------- Email ----------
+    // Validate Email
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
     } else {
-        $email = htmlspecialchars(trim($_POST["email"]));
+        $email = trim($_POST["email"]);
         if (!preg_match("/^(?=.*[@])(?=.*[.]).+$/", $email)) {
             $emailErr = "Email must contain @ and .";
         }
     }
 
-    // ---------- Problem ----------
+    // Validate Problem
     if (empty($_POST["problem"])) {
         $problemErr = "Problem description is required";
     } else {
-        $problem = htmlspecialchars(trim($_POST["problem"]));
+        $problem = trim($_POST["problem"]);
     }
 
-    // ---------- Insert into Database ----------
+    // Insert into database if no errors
     if (empty($emailErr) && empty($problemErr)) {
-
         $email_db = $conn->real_escape_string($email);
         $problem_db = $conn->real_escape_string($problem);
 
-        $sql = "INSERT INTO farmers_help (Email, Description) 
+        $sql = "INSERT INTO farmers_help (Email, Description)
                 VALUES ('$email_db', '$problem_db')";
 
-        if ($conn->query($sql) === TRUE) {
+        if ($conn->query($sql)) {
             $success = "Problem submitted successfully!";
             $email = $problem = "";
         } else {
-            $error = "Error: " . $conn->error;
+            $error = "Database error!";
         }
     }
-}
-
-// ===== FETCH ALL PROBLEMS =====
-$allProblems = [];
-$sql_fetch = "SELECT * FROM farmers_help"; // fetch all
-$result = $conn->query($sql_fetch);
-if ($result) {
-    while ($row = $result->fetch_assoc()) {
-        $allProblems[] = $row;
-    }
-} else {
-    $error = "Error fetching problems: " . $conn->error;
 }
 ?>
