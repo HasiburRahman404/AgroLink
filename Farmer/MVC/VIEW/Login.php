@@ -58,7 +58,7 @@ include '../CONTROL/login_valid.php';
                
 
                 <p class="logintext">
-                    Don’t have an account? <a href="register.html">Register</a>
+                    Don’t have an account? <a href="userregistration.php">Register</a>
                 </p>
             </form>
         </div>

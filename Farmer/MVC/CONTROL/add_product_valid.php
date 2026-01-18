@@ -7,7 +7,7 @@ $productName = $category = $price = $quantity = $description = $productImage = "
 $nameErr = $categoryErr = $priceErr = $quantityErr = $descriptionErr = $imageErr = "";
 $success = $error = "";
 
-// ===== Process form only if submitted =====
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // ---------- Product Name ----------

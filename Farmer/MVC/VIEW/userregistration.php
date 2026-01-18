@@ -1,6 +1,6 @@
 <?php
 
-include 'register_valid.php';
+include '../CONTROL/register_valid.php';
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ include 'register_valid.php';
 
 
         <p class="logintext">
-            Already have an account? <a href="#">Login</a>
+            Already have an account? <a href="Login.php">Login</a>
         </p>
     </form>
 </div>
