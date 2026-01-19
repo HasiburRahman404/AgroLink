@@ -126,7 +126,7 @@
  
         <div class="buttons">
 <button type="button" onclick="window.location.href='home_page.php'">Cancel</button>
-<button type="submit">Next</button>
+<button type="submit" onclick="window.location.href='Payment_page.php'">Next</button>
 </div>
  
     </form>

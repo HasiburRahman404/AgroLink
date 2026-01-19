@@ -10,7 +10,7 @@
     <div class="container">
         <img src="../images/thanks2.jpg" alt="Background" class="bg-img">
 
-        <button class="home-btn"  onclick="window.location.href='home_page.php'">HOME</button>
+        <button class="home-btn"  onclick="window.location.href='Fruits.php'">HOME</button>
     </div>
 
 </body>
