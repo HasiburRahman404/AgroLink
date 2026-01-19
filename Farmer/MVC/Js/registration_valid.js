@@ -12,7 +12,7 @@ function validateForm() {
     var confirmError = document.getElementById("confirmError");
     var successMessage = document.getElementById("successMessage");
 
-    // Clear previous errors
+    
     nameError.innerHTML = "";
     emailError.innerHTML = "";
     phoneError.innerHTML = "";
@@ -22,7 +22,6 @@ function validateForm() {
 
     var valid = true;
 
-    // ---------- Name ----------
     if(name === "") {
         nameError.innerHTML = "Full Name is required";
         valid = false;
@@ -31,7 +30,7 @@ function validateForm() {
         valid = false;
     }
 
-    // ---------- Email ----------
+   
     if(email === "") {
         emailError.innerHTML = "Email is required";
         valid = false;
@@ -40,7 +39,7 @@ function validateForm() {
         valid = false;
     }
 
-    // ---------- Phone Number ----------
+   
     if(phonenumber === "") {
         phoneError.innerHTML = "Phone number is required";
         valid = false;
@@ -49,7 +48,7 @@ function validateForm() {
         valid = false;
     }
 
-    // ---------- Password ----------
+   
     if(password === "") {
         passwordError.innerHTML = "Password is required";
         valid = false;
@@ -58,7 +57,7 @@ function validateForm() {
         valid = false;
     }
 
-    // ---------- Confirm Password ----------
+   
     if(confirmpassword === "") {
         confirmError.innerHTML = "Confirm your password";
         valid = false;
@@ -67,5 +66,5 @@ function validateForm() {
         valid = false;
     }
 
-    return valid; // prevent submission if false
+    return valid; 
 }

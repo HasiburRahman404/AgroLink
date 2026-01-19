@@ -29,8 +29,8 @@ include '../CONTROL/add_product_valid.php';
             <li><a href="my_products.php">My Products</a></li>
             <li class="active"><a href="add_product.php">Add Product</a></li>
             <li><a href="Farmers_help.php">Farmers Help</a></li>
-            <li><a href="orders.php">Orders</a></li>
-            <li><a href="earnings.php">Earnings</a></li>
+            <li><a href="order.php">Orders</a></li>
+            
         </ul>
     </aside>
 

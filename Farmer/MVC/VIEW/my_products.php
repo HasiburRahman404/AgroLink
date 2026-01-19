@@ -23,11 +23,11 @@ include '../CONTROL/my_product_valid.php';
         <ul>
             <li><a href="admin_dashboard.php">Dashboard</a></li>
             <li><a href="farmerprofile.php">Profile</a></li>
-             <li class="active"><a href="my_products.php">My Products</a></li>
+             <li ><a href="my_products.php">My Products</a></li>
             <li><a href="add_product.php">Add Product</a></li>
             <li><a href="Farmers_help.php">Farmers Help</a></li>
-            <li><a href="orders.php">Orders</a></li>
-            <li><a href="earnings.php">Earnings</a></li>
+            <li><a href="order.php">Orders</a></li>
+            
            
         </ul>
     </aside>
@@ -64,7 +64,7 @@ include '../CONTROL/my_product_valid.php';
                 <tr>
                     <th>Product Name</th>
                     <th>Category</th>
-                    <th>Price (৳)</th>
+                    <th>Price (tk)</th>
                     <th>Quantity</th>
                     <th>Description</th>
                     <th>Image</th>
