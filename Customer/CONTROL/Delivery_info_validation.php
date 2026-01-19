@@ -95,6 +95,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($conn->query($sql1) === TRUE && $conn->query($sql2) === TRUE) {
 
             $success = "Information submitted successfully!";
+             header("Location: Payment_page.php");
+    exit();
 
         } else {
 
