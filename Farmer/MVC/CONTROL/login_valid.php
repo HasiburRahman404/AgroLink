@@ -19,17 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $passwordErr = "Password is required";
     }
 
-   
+ if (empty($emailErr) && empty($passwordErr)) {
 
-if (empty($emailErr) && empty($passwordErr)) {
+    $conn = openConn(); // use your existing function
 
-    $sql = "SELECT * FROM farmer_information WHERE email='$email'";
-    $result = $conn->query($sql);
+    $result = getFarmerByEmail($conn, $email);
 
-    if ($result->num_rows === 1) {
+    if ($result && $result->num_rows === 1) {
 
         $row = $result->fetch_assoc();
-        $db_password = $row['Password'];
+        $db_password = $row['Password']; // column name must match DB
 
         if (password_verify($password, $db_password)) {
 
@@ -54,6 +53,9 @@ if (empty($emailErr) && empty($passwordErr)) {
     } else {
         $loginError = "Email not found!";
     }
+
+    $conn->close();
 }
+
 }
 ?>
