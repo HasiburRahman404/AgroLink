@@ -42,7 +42,7 @@
                 CANCEL
             </button>
 
-            <!-- IMPORTANT: submit button -->
+           
             <button type="submit" class="btn next">
                 NEXT
             </button>

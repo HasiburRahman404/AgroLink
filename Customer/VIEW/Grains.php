@@ -8,19 +8,27 @@
 </head>
 <body>
 
-<!-- Top Header -->
+
 <header class="top-header">
     <div class="logo">
         <img src="../images/logo.jpg" alt="AgroLink Logo">
-        AgroLink</div>
-    <div class="header-icons">
-        <span>🔍</span>
-        <span>🛒</span>
-        <span>👤</span>
+        AgroLink
     </div>
+
+    
+    <div class="header-icons" style="display: flex; align-items: center; gap: 10px;">
+    
+    <a href="Purses.php" class="cart-icon">🛒</a>
+
+    
+    <form action="../VIEW/home_page.php" method="GET">
+        <button type="submit" class="logout-btn">Logout</button>
+    </form>
+</div>
+
 </header>
 
-<!-- Navigation Bar -->
+
 <nav class="nav-bar">
     <div class="nav-links">
         <a class="verify-btn" href="../VIEW/home_page.php">Home</a>
@@ -36,10 +44,10 @@
 </nav>
 
 
-<!-- Main Content -->
+
 <div class="container">
 
-    <!-- Sidebar -->
+  
     <aside class="sidebar">
         <h3>Categories</h3>
         <ul>
@@ -56,7 +64,7 @@
         </ul>
     </aside>
 
-    <!-- Products Section -->
+    
     <main class="products-section">
         <h1>Shop</h1>
         <h2 class="tagline">Authentic grains, traditional flavor, true nutrition</h2>

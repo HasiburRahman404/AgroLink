@@ -16,10 +16,10 @@
 
     
     <div class="header-icons" style="display: flex; align-items: center; gap: 10px;">
-    <!-- Cart Icon -->
+   
     <a href="Purses.php" class="cart-icon">🛒</a>
 
-    <!-- Logout Button -->
+    
     <form action="../VIEW/home_page.php" method="GET">
         <button type="submit" class="logout-btn">Logout</button>
     </form>
@@ -27,7 +27,7 @@
 
 </header>
 
-<!-- Navigation Bar -->
+
 <nav class="nav-bar">
     <div class="nav-links">
         <a class="verify-btn" href="../VIEW/home_page.php">Home</a>
@@ -57,7 +57,7 @@
         <h2 class="tagline">Nurturing Nature, Feeding the World.</h2>
         <div class="products-grid">
 
-            <!-- Example Product -->
+           
             <div class="product-card">
                 <span class="sale">Sale</span>
                 <img src="../images/coconut.jpg" alt="Coconut">
@@ -71,7 +71,7 @@
                 </form>
             </div>
 
-            <!-- Add other product cards as in your original page... -->
+            
              <!-- Product 2 -->
     <div class="product-card">
         <span class="sale">Sale</span>

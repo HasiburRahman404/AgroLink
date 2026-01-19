@@ -19,21 +19,21 @@ if (isset($_POST['submit'])) {
     $password   = $_POST['password'];
     $repassword = $_POST['repassword'];
 
-    /* Full Name */
+    
     if ($fullname == "") {
         $errors['fullname'] = "Full name is required.";
     } elseif (!preg_match("/^[A-Za-z]+( [A-Za-z]+)+$/", $fullname)) {
         $errors['fullname'] = "Name must contain at least two words using letters only.";
     }
 
-    /* Email */
+    
     if ($email == "") {
         $errors['email'] = "Email is required.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = "Invalid email address.";
     }
 
-    /* Password */
+    
     if ($password == "") {
         $errors['password'] = "Password is required.";
     } elseif (strlen($password) < 8) {
@@ -46,14 +46,14 @@ if (isset($_POST['submit'])) {
         $errors['password'] = "Must include a special character.";
     }
 
-    /* Retype Password */
+
     if ($repassword == "") {
         $errors['repassword'] = "Please retype password.";
     } elseif ($password !== $repassword) {
         $errors['repassword'] = "Passwords do not match.";
     }
 
-    /* If no errors */
+    
     if (
         
         $errors['fullname'] == "" &&
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
         $errors['repassword'] == ""
     ) {
 
-        // ❌ NO HASHING – storing password as plain text
+        
         $sql = "INSERT INTO customer (Name, Email, Password)
                 VALUES ('$fullname', '$email', '$password')";
 

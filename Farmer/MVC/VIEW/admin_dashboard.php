@@ -1,9 +1,6 @@
 <?php
-session_start();
-if (!isset($_SESSION["email"])) {
-    header("Location: ../VIEW/login.php");
-    exit();
-} 
+
+
 
 ?>
 <!DOCTYPE html>

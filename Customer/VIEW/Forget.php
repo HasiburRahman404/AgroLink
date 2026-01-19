@@ -1,5 +1,5 @@
 <?php
-// include validation file
+
 include "../CONTROL/forget_validation.php";
 ?>
 

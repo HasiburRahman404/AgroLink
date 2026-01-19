@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- Navigation -->
+
 <header>
     <nav class="navbar">
         <div class="logo">
@@ -28,7 +28,7 @@
     </nav>
 </header>
 
-<!-- Hero -->
+
 <section class="hero" style="background-image: url('../images/agriculture-background3.jpg');">
 
     <div class="hero-content">
@@ -37,12 +37,12 @@
         <p>Connect with local farmers and get the freshest produce at the best prices.</p>
         <br>
         <a class="btn primary" href="Login.php">Shop Now</a>
-        <a class="btn secondary" href="#sellers">Sell your product</a>
+        <a class="btn secondary" href="../">Sell your product</a>
     </div>
 </section>
 
 
-<!-- Products -->
+
 <section id="products" class="products">
     <h1>Featured Products</h1>
     <div class="product-grid">
@@ -94,22 +94,13 @@
             <h4>Grains</h4>
         </a>
 
-<!--
-        <a href="livestock.php" class="category-card">
-            <img src="../images/farm-livestock.jpg" alt="Livestock" class="category-img">
-            <h4>Livestock</h4>
-        </a>
--->
+
+
         <a href="Login.php" class="category-card">
             <img src="../images/dairy.jpg" alt="Dairy" class="category-img">
             <h4>Dairy</h4>
         </a>
-<!--
-        <a href="equipment.php" class="category-card">
-            <img src="images/tools.jpg" alt="Equipment" class="category-img">
-            <h4>Equipment</h4>
-        </a>
--->
+
     </div>
 </section>
 
