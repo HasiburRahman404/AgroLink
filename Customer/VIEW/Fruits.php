@@ -193,6 +193,6 @@
     <p>© 2025 AgroLink. All rights reserved.</p>
 </footer>
 
-<script src="../JS/fruit.js"></script>
+
 </body>
 </html>

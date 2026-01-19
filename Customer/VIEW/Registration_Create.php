@@ -34,6 +34,13 @@
         <span class="error"><?php echo $errors['repassword']; ?></span>
 
         <button type="submit" name="submit">Create Account</button>
+        <?php if ($success != ""): ?>
+    <button type="button" onclick="window.location.href='Login.php'">Login</button>
+<?php else: ?>
+    <button type="button" disabled style="opacity:0.5; cursor:not-allowed;">Login</button>
+<?php endif; ?>
+
+        
     </form>
 
 </div>
