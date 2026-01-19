@@ -37,7 +37,7 @@
         <p>Connect with local farmers and get the freshest produce at the best prices.</p>
         <br>
         <a class="btn primary" href="Login.php">Shop Now</a>
-        <a class="btn secondary" href="../">Sell your product</a>
+        <a class="btn secondary" href="../../Farmer/MVC/VIEW/Login.php">Sell your product</a>
     </div>
 </section>
 
