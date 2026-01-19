@@ -1,35 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>bKash Payment</title>
-    <link rel="stylesheet" href="../CSS/Bkash.css">
+    <link rel="stylesheet" href="../css/bkash.css">
 </head>
 <body>
 
-<div class="payment-wrapper">
-    <div class="header">
-        <span class="bkash">bKash</span>
-        <span class="payment">Payment</span>
+<div class="page-bg"></div>
+
+<div class="payment-card">
+    <div class="card-header">
+        <h1><span>bKash</span> Payment</h1>
     </div>
 
-    <div class="content">
-        <p class="label">Your bKash Account number</p>
-        <input type="text" placeholder="e.g 01XXXXXXXXX">
+    <div class="card-body">
+        <label>Your bKash Account Number</label>
+        <input type="text" placeholder="01XXXXXXXXX">
 
         <p class="terms">
-            By clicking on Confirm, you are agreeing to the
-            <a href="#">terms & conditions</a>
+            By clicking <b>Confirm</b>, you agree to our
+            <a href="#">Terms & Conditions</a>
         </p>
     </div>
 
-    <div class="buttons">
-        <button class="close" onclick="window.location.href='home_page.php'">CLOSE</button>
-        <button class="confirm"  onclick="window.location.href='thanks.php'">CONFIRM</button>
+    <div class="card-buttons">
+        <a href="home_page.php" class="btn close">CLOSE</a>
+        <a href="thanks.php" class="btn confirm">CONFIRM</a>
     </div>
 
-    <div class="footer">
+    <div class="card-footer">
         📞 16247
     </div>
 </div>

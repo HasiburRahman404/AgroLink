@@ -1,55 +1,88 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
 body {
-    background-color: rgba(43, 116, 4, 0.2);
-    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #2e7d32, #a5d6a7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.payment-wrapper {
-    width: 350px;
-    margin: 40px auto;
-    border: 3px solid #000;
-    background: #fff;
+
+
+.page-bg {
+    position: fixed;
+    inset: 0;
+    background: url("../images/logo.jpg") center/cover no-repeat;
+    opacity: 0.12;
+    z-index: -1;
 }
 
-.header {
+
+.payment-card {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    animation: fadeUp 0.8s ease;
+}
+
+
+.card-header {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     border-bottom: 2px solid #e91e63;
 }
 
-.header .bkash {
+.card-header h1 {
+    font-size: 26px;
     color: #e91e63;
+}
+
+.card-header span {
     font-weight: bold;
-    font-size: 22px;
 }
 
-.header .payment {
-    color: #e91e63;
-    font-size: 18px;
-    margin-left: 5px;
-}
 
-.content {
+.card-body {
     background: #e91e63;
-    padding: 25px;
-    color: white;
+    padding: 30px;
+    color: #fff;
     text-align: center;
 }
 
-.label {
-    margin-bottom: 10px;
-    font-size: 14px;
+.card-body label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
 }
 
-input {
+.card-body input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 8px;
     border: none;
-    margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    outline: none;
 }
+
+.card-body input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
 
 .terms {
     font-size: 12px;
+    line-height: 1.5;
 }
 
 .terms a {
@@ -57,39 +90,54 @@ input {
     text-decoration: underline;
 }
 
-.buttons {
+
+.card-buttons {
     display: flex;
 }
 
-button {
+.btn {
     width: 50%;
-    padding: 15px;
-    border: none;
+    padding: 16px 0;
+    text-align: center;
+    text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.close {
-    background: #ddd;
+.btn.close {
+    background: #f0f0f0;
+    color: #333;
 }
 
-.confirm {
-    background: #ccc;
-}
-
-.close:hover {
-    background: #bdbdbd;
-}
-
-.confirm:hover {
-    background: #ab1e54;
+.btn.confirm {
+    background: #ffc1d9;
     color: #fff;
 }
 
+.btn.close:hover {
+    background: #d6d6d6;
+}
 
-.footer {
+.btn.confirm:hover {
+    background: #c2185b;
+}
+
+
+.card-footer {
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     color: #e91e63;
     font-weight: bold;
+}
+
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
