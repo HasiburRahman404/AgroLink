@@ -76,13 +76,13 @@
         <img src="../images/Tomato1.jpg" alt="tomato">
         <p class="category">Tomato</p>
         <h4>Best Quality Tomato  </h4>
-        <p class="price"><del>90.00৳</del> 85.00৳</p>
+        <p class="price"><del>100.00৳</del> 95.00৳</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Coconut">
-            <input type="hidden" name="price" value="85">
-            <button type="submit">Add to Cart</button>
-        </form>
+    <input type="hidden" name="product_name" value="Tomato">
+    <input type="hidden" name="price" value="95">
+    <button type="submit">Add to Cart</button>
+</form>
     </div>
 
     <!-- Product 2 -->
@@ -91,13 +91,13 @@
         <img src="../images/Beguni.jpg" alt="Brinjal">
         <p class="category">Brinjal</p>
         <h4>Brinjal Price</h4>
-        <p class="price"><del>280.00৳</del> 255.00৳/kg</p>
+        <p class="price"><del>80.00৳</del> 65.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Apple">
-            <input type="hidden" name="price" value="255">
-            <button type="submit">Add to Cart</button>
-        </form>
+    <input type="hidden" name="product_name" value="Brinjal">
+    <input type="hidden" name="price" value="65">
+    <button type="submit">Add to Cart</button>
+</form>
     </div>
 
     <!-- Product 3 -->
@@ -106,13 +106,13 @@
         <img src="../images/broccoli.jpg" alt="Broccoli">
         <p class="category">Broccoli</p>
         <h4>Broccoli</h4>
-        <p class="price"><del>50.00৳</del> 40.00৳/dozon</p>
+        <p class="price"><del>60.00৳</del> 58.00৳/dozon</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Banana">
-            <input type="hidden" name="price" value="40">
-            <button type="submit">Add to Cart</button>
-        </form>
+    <input type="hidden" name="product_name" value="Broccoli">
+    <input type="hidden" name="price" value="58">
+    <button type="submit">Add to Cart</button>
+</form>
     </div>
 
     <!-- Product 4 -->
@@ -121,13 +121,13 @@
         <img src="../images/misti-kumra.jpg" alt="Misti-kumra">
         <p class="category">Misti-kumra</p>
         <h4>Misti-kumra</h4>
-        <p class="price"><del>165.00৳</del> 160.00৳</p>
+        <p class="price"><del>65.00৳</del> 60.00৳</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Watermelon">
-            <input type="hidden" name="price" value="160">
-            <button type="submit">Add to Cart</button>
-        </form>
+    <input type="hidden" name="product_name" value="Misti Kumra">
+    <input type="hidden" name="price" value="60">
+    <button type="submit">Add to Cart</button>
+</form>
     </div>
 
     <!-- Product 5 -->
@@ -136,13 +136,13 @@
         <img src="../images/Capsicum.jpg" alt="Capsicume">
         <p class="category">Capsicum</p>
         <h4>Capsicum</h4>
-        <p class="price"><del>265.00৳</del> 260.00৳/kg</p>
+        <p class="price"><del>125.00৳</del> 120.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Orange">
-            <input type="hidden" name="price" value="260">
-            <button type="submit">Add to Cart</button>
-        </form>
+    <input type="hidden" name="product_name" value="Capsicum">
+    <input type="hidden" name="price" value="120">
+    <button type="submit">Add to Cart</button>
+</form>
     </div>
 
     <!-- Product 6 -->
@@ -151,13 +151,13 @@
         <img src="../images/Mix-vegetable.jpg" alt="Mix-vegetable">
         <p class="category">Mix-vegetable</p>
         <h4>Mix-vegetable</h4>
-        <p class="price"><del>65.00৳</del> 60.00৳/kg</p>
+        <p class="price"><del>85.00৳</del> 80.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Pineapple">
-            <input type="hidden" name="price" value="60">
-            <button type="submit">Add to Cart</button>
-        </form>
+    <input type="hidden" name="product_name" value="Mix Vegetable">
+    <input type="hidden" name="price" value="80">
+    <button type="submit">Add to Cart</button>
+</form>
     </div>
 
     

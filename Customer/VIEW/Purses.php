@@ -86,20 +86,13 @@ $cart = $_SESSION['cart'] ?? [];
 
     <div class="review-wrapper">
         <div class="review-box">
-
-            <textarea 
-                class="review-textarea"
-                placeholder="Give review here..."></textarea>
-
+            <textarea class="review-textarea" placeholder="Give review here..."></textarea>
             <div class="review-divider"></div>
-
             <button class="review-btn">Add review</button>
         </div>
     </div>
 
-
 </div>
-
 
 <section id="contact" class="contact">
     <h2>Contact Us</h2>
@@ -112,7 +105,6 @@ $cart = $_SESSION['cart'] ?? [];
     <p>© 2025 AgroLink. All rights reserved.</p>
 </footer>
 
-<!-- External JS -->
 <script src="../JS/purses.js"></script>
 
 </body>

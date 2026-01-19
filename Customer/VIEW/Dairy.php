@@ -79,7 +79,7 @@
         <p class="price"><del>90.00৳</del> 85.00৳</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Coconut">
+            <input type="hidden" name="product_name" value="Milk">
             <input type="hidden" name="price" value="85">
             <button type="submit">Add to Cart</button>
         </form>
@@ -94,7 +94,7 @@
         <p class="price"><del>280.00৳</del> 255.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Apple">
+            <input type="hidden" name="product_name" value="Aarong-dairy-butter">
             <input type="hidden" name="price" value="255">
             <button type="submit">Add to Cart</button>
         </form>
@@ -108,11 +108,11 @@
         <img src="../images/Nescafe.jpg" alt="Nescafe">
         <p class="category">Nescafe</p>
         <h4>Nescafe</h4>
-        <p class="price"><del>165.00৳</del> 160.00৳</p>
+        <p class="price"><del>265.00৳</del> 260.00৳</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Watermelon">
-            <input type="hidden" name="price" value="160">
+            <input type="hidden" name="product_name" value="Nescafe">
+            <input type="hidden" name="price" value="260">
             <button type="submit">Add to Cart</button>
         </form>
     </div>
@@ -129,7 +129,7 @@
         <p class="price"><del>265.00৳</del> 260.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Mango">
+            <input type="hidden" name="product_name" value="Cheese">
             <input type="hidden" name="price" value="260">
             <button type="submit">Add to Cart</button>
         </form>
@@ -144,7 +144,7 @@
         <p class="price"><del>95.00৳</del> 85.00৳/kg</p>
 
         <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Guava">
+            <input type="hidden" name="product_name" value="Aarong Sour yogurt">
             <input type="hidden" name="price" value="85">
             <button type="submit">Add to Cart</button>
         </form>
