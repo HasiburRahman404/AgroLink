@@ -1,8 +1,11 @@
 <?php
+session_start();
+include "../MODEL/Database_conn.php";
 
-
-
+$conn = openConn();
+$review_result = $conn->query("SELECT review FROM userreview");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,76 +15,81 @@
 </head>
 <body>
 
-
+<!-- TOP BAR -->
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
     <a href="../CONTROL/farmerlogout.php" class="logout">Logout</a>
 </header>
 
-
+<!-- MAIN LAYOUT -->
 <div class="container">
 
-   
-<aside class="sidebar">
-    <ul>
-       <li><a href="admin_dashboard.php">Dashboard</a></li>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="admin_dashboard.php">Dashboard</a></li>
             <li><a href="farmerprofile.php">Profile</a></li>
-             <li class="active"><a href="my_products.php">My Products</a></li>
+            <li class="active"><a href="my_products.php">My Products</a></li>
             <li><a href="add_product.php">Add Product</a></li>
             <li><a href="Farmers_help.php">Farmers Help</a></li>
             <li><a href="orders.php">Orders</a></li>
             <li><a href="earnings.php">Earnings</a></li>
-    </ul>
-</aside>
+        </ul>
+    </aside>
 
-
-    
+    <!-- CONTENT -->
     <main class="content">
+        <h1>My Products</h1>
 
-        <h1>Farmer Dashboard</h1>
-
-        
+        <!-- PRODUCT CARDS -->
         <div class="cards">
             <div class="card">
-                <h2>15</h2>
-                <p>My Products</p>
+                <img src="../images/vegetables.jpg" alt="Vegetables">
+                <h2>Vegetables</h2>
+                <p>Freshly harvested organic vegetables.</p>
             </div>
+
             <div class="card">
-                <h2>8</h2>
-                <p>Orders Received</p>
+                <img src="../images/apple1.jpg" alt="Fruits">
+                <h2>Fruits</h2>
+                <p>Seasonal fruits straight from the farm.</p>
             </div>
+
             <div class="card">
-                <h2>৳ 12,500</h2>
-                <p>Total Earnings</p>
+                <img src="../images/rice.jpg" alt="Grains">
+                <h2>Grains</h2>
+                <p>High-quality grains for all needs.</p>
             </div>
         </div>
 
-        
-        <div class="table-box">
-            <h2>Recent Orders</h2>
-            <table>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>#101</td>
-                    <td>Fresh Rice</td>
-                    <td>20 kg</td>
-                    <td>Pending</td>
-                </tr>
-                <tr>
-                    <td>#102</td>
-                    <td>Organic Potato</td>
-                    <td>10 kg</td>
-                    <td>Delivered</td>
-                </tr>
+        <!-- REVIEWS SECTION (ONLY REVIEW COLUMN) -->
+        <div class="review-box">
+            <h2>Customer Reviews</h2>
+
+            <table class="review-table">
+                <thead>
+                    <tr>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if ($review_result && $review_result->num_rows > 0): ?>
+                        <?php while ($row = $review_result->fetch_assoc()): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($row['review']) ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td>No reviews available</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
             </table>
         </div>
 
     </main>
+
 </div>
 
 </body>

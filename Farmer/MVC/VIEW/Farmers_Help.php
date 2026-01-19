@@ -35,7 +35,7 @@ include '../CONTROL/Farmers_Help_Valid.php';
     
     <main class="content">
 
-        <h1>🌾 Farmer Help Hub</h1>
+        <h1>Farmer Help Hub</h1>
 
         <?php 
         if (!empty($success)) echo "<p class='success'>$success</p>";
