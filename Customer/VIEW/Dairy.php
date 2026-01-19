@@ -22,24 +22,17 @@
 
 <!-- Navigation Bar -->
 <nav class="nav-bar">
-
- <div class="nav-links">
-   <!-- Using inline onclick -->
-<button class="verify-btn" onclick="window.location.href='../VIEW/home_page.php'">Home</button>
-
-    <button class="verify-btn">Products</button>
-    <button class="verify-btn">Sellers</button>
-    <button class="verify-btn">Categories</button>
-    <button class="verify-btn">About</button>
-    <button class="verify-btn">About Us</button>
-</div>
-
-
-    <div class="nav-buttons">
-        <button class="verify-btn">Become a Verified Supplier</button>
-        <button class="partner-btn">Our Partners</button>
+    <div class="nav-links">
+        <a class="verify-btn" href="../VIEW/home_page.php">Home</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#products">Products</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#featured-seller">Sellers</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#categories">Categories</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#about-box">About</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#contact">About Us</a>
+        <a class="verify-btn" href="#contact">Contact Us</a>
     </div>
 
+    
 </nav>
 
 

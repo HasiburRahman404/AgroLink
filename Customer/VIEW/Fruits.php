@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>AgroLink</title>
+    <meta charset="UTF-8">
+    <title>AgroLink - Fruits</title>
     <link rel="stylesheet" href="../CSS/fruits.css">
 </head>
 <body>
@@ -11,74 +11,68 @@
 <header class="top-header">
     <div class="logo">
         <img src="../images/logo.jpg" alt="AgroLink Logo">
-        AgroLink</div>
-    <div class="header-icons">
-        <span>🔍</span>
-        <span>🛒</span>
-        <span>👤</span>
+        AgroLink
     </div>
+
+    
+    <div class="header-icons" style="display: flex; align-items: center; gap: 10px;">
+    <!-- Cart Icon -->
+    <a href="Purses.php" class="cart-icon">🛒</a>
+
+    <!-- Logout Button -->
+    <form action="../VIEW/home_page.php" method="GET">
+        <button type="submit" class="logout-btn">Logout</button>
+    </form>
+</div>
+
 </header>
 
 <!-- Navigation Bar -->
 <nav class="nav-bar">
-
- <div class="nav-links">
-   
-<button class="verify-btn" onclick="window.location.href='../VIEW/home_page.php'">Home</button>
-
-    <button class="verify-btn">Products</button>
-    <button class="verify-btn">Sellers</button>
-    <button class="verify-btn">Categories</button>
-    <button class="verify-btn">About</button>
-    <button class="verify-btn">About Us</button>
-</div>
-
-
-    <div class="nav-buttons">
-        <button class="verify-btn">Become a Verified Supplier</button>
-        <button class="partner-btn">Our Partners</button>
+    <div class="nav-links">
+        <a class="verify-btn" href="../VIEW/home_page.php">Home</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#products">Products</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#featured-seller">Sellers</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#categories">Categories</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#about-box">About</a>
+        <a class="verify-btn" href="../VIEW/home_page.php#contact">About Us</a>
+        <a class="verify-btn" href="#contact">Contact Us</a>
     </div>
 
+    
 </nav>
 
-
-<!-- Main Content -->
 <div class="container">
-
-    
     <aside class="sidebar">
         <h3>Categories</h3>
         <ul>
-            <li> <button onclick="location.href='vegetable.php'" class="verify-btn">
-        Vegetable
-    </button></li>
-            <li><button onclick="location.href='Dairy.php'" class="verify-btn">Dairy</li></button>
-            <li><button onclick="location.href='Grains.php'" class="verify-btn">Grains</li></button>
+            <li><button onclick="location.href='vegetable.php'" class="verify-btn">Vegetable</button></li>
+            <li><button onclick="location.href='Dairy.php'" class="verify-btn">Dairy</button></li>
+            <li><button onclick="location.href='Grains.php'" class="verify-btn">Grains</button></li>
         </ul>
     </aside>
 
-    <!-- Products Section -->
     <main class="products-section">
         <h1>Shop</h1>
         <h2 class="tagline">Nurturing Nature, Feeding the World.</h2>
-<div class="products-grid">
+        <div class="products-grid">
 
-    <!-- Product 1 -->
-    <div class="product-card">
-        <span class="sale">Sale</span>
-        <img src="../images/coconut.jpg" alt="Coconut">
-        <p class="category">Coconuts</p>
-        <h4>Best Quality Coconut for Wholesale</h4>
-        <p class="price"><del>90.00৳</del> 85.00৳</p>
+            <!-- Example Product -->
+            <div class="product-card">
+                <span class="sale">Sale</span>
+                <img src="../images/coconut.jpg" alt="Coconut">
+                <p class="category">Coconuts</p>
+                <h4>Best Quality Coconut for Wholesale</h4>
+                <p class="price"><del>90.00৳</del> 85.00৳</p>
+                <form action="Purses.php" method="POST">
+                    <input type="hidden" name="product_name" value="Coconut">
+                    <input type="hidden" name="price" value="85">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
 
-        <form action="Purses.php" method="POST">
-            <input type="hidden" name="product_name" value="Coconut">
-            <input type="hidden" name="price" value="85">
-            <button type="submit">Add to Cart</button>
-        </form>
-    </div>
-
-    <!-- Product 2 -->
+            <!-- Add other product cards as in your original page... -->
+             <!-- Product 2 -->
     <div class="product-card">
         <span class="sale">Sale</span>
         <img src="../images/apple1.jpg" alt="Apple">
@@ -181,14 +175,13 @@
             <input type="hidden" name="price" value="85">
             <button type="submit">Add to Cart</button>
         </form>
-    </div>
-
 </div>
 
+        </div>
     </main>
 </div>
 
-<!-- Contact -->
+<!-- Contact Section -->
 <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Dhaka, Bangladesh</p>
@@ -200,5 +193,6 @@
     <p>© 2025 AgroLink. All rights reserved.</p>
 </footer>
 
+<script src="../JS/fruit.js"></script>
 </body>
 </html>
