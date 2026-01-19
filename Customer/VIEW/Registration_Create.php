@@ -17,28 +17,24 @@
     <?php } ?>
 
     <form method="post" action="">
-    <label>Full Name</label>
-    <input type="text" name="fullname" value="<?php echo $fullname; ?>">
-    <span class="error"><?php echo $errors['fullname']; ?></span>
-<!--
-    <label>Username</label>
-    <input type="text" name="username" value="<?php echo $username; ?>">
-    <span class="error"><?php echo $errors['username']; ?></span>
--->
-    <label>Email</label>
-    <input type="email" name="email" value="<?php echo $email; ?>">
-    <span class="error"><?php echo $errors['email']; ?></span>
+        <label>Full Name</label>
+        <input type="text" name="fullname" value="<?php echo $fullname; ?>">
+        <span class="error"><?php echo $errors['fullname']; ?></span>
 
-    <label>Password</label>
-    <input type="password" name="password">
-    <span class="error"><?php echo $errors['password']; ?></span>
+        <label>Email</label>
+        <input type="email" name="email" value="<?php echo $email; ?>">
+        <span class="error"><?php echo $errors['email']; ?></span>
 
-    <label>Retype Password</label>
-    <input type="password" name="repassword">
-    <span class="error"><?php echo $errors['repassword']; ?></span>
+        <label>Password</label>
+        <input type="password" name="password">
+        <span class="error"><?php echo $errors['password']; ?></span>
 
-    <button type="submit" name="submit">Create Account</button>
-</form>
+        <label>Retype Password</label>
+        <input type="password" name="repassword">
+        <span class="error"><?php echo $errors['repassword']; ?></span>
+
+        <button type="submit" name="submit">Create Account</button>
+    </form>
 
 </div>
 

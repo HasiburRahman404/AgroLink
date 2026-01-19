@@ -1,45 +1,31 @@
 <?php
 include "../MODEL/database_connection.php";
+
 $errors = [
     'fullname'   => '',
-    
     'email'      => '',
     'password'   => '',
     'repassword' => ''
-    
-
 ];
-$success = "";
 
+$success = "";
 
 $fullname = $username = $email = '';
 
-
 if (isset($_POST['submit'])) {
 
-    
     $fullname   = trim($_POST['fullname']);
-    //$username   = trim($_POST['username']);
     $email      = trim($_POST['email']);
     $password   = $_POST['password'];
     $repassword = $_POST['repassword'];
 
-    
+    /* Full Name */
     if ($fullname == "") {
-    $errors['fullname'] = "Full name is required.";
+        $errors['fullname'] = "Full name is required.";
     } elseif (!preg_match("/^[A-Za-z]+( [A-Za-z]+)+$/", $fullname)) {
-    $errors['fullname'] = "Name must contain at least two words using letters only.";
+        $errors['fullname'] = "Name must contain at least two words using letters only.";
     }
 
-
-    /*  Username  */
-    /*
-    if ($username == "") {
-        $errors['username'] = "Username is required.";
-    } elseif (!preg_match("/^[A-Za-z0-9_]{4,15}$/", $username)) {
-        $errors['username'] = "Username must be 4–15 characters.";
-    }
-*/
     /* Email */
     if ($email == "") {
         $errors['email'] = "Email is required.";
@@ -47,7 +33,7 @@ if (isset($_POST['submit'])) {
         $errors['email'] = "Invalid email address.";
     }
 
- 
+    /* Password */
     if ($password == "") {
         $errors['password'] = "Password is required.";
     } elseif (strlen($password) < 8) {
@@ -60,35 +46,32 @@ if (isset($_POST['submit'])) {
         $errors['password'] = "Must include a special character.";
     }
 
-    
+    /* Retype Password */
     if ($repassword == "") {
         $errors['repassword'] = "Please retype password.";
     } elseif ($password !== $repassword) {
         $errors['repassword'] = "Passwords do not match.";
     }
 
-    
+    /* If no errors */
     if (
+        
         $errors['fullname'] == "" &&
-        //$errors['username'] == "" &&
         $errors['email'] == "" &&
         $errors['password'] == "" &&
         $errors['repassword'] == ""
     ) {
 
-          $hashPassword = password_hash($password, PASSWORD_DEFAULT);
-
-      
-        $sql = "INSERT INTO customer(Name, Email, Password)
-                VALUES ('$fullname', '$email', '$hashPassword')";
+        // ❌ NO HASHING – storing password as plain text
+        $sql = "INSERT INTO customer (Name, Email, Password)
+                VALUES ('$fullname', '$email', '$password')";
 
         if ($conn->query($sql) === TRUE) {
             $success = "Registration Successful!";
-            $fullname = $email = $hashPassword= "";
+            $fullname = $email = "";
         } else {
             $error = "Error: " . $conn->error;
         }
     }
-
 }
 ?>

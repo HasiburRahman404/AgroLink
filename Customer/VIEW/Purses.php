@@ -14,7 +14,6 @@ $cart = $_SESSION['cart'] ?? [];
 
 <body>
 
-
 <header class="top-header">
     <div class="logo">
         <img src="../images/logo.jpg" alt="AgroLink Logo">
@@ -23,10 +22,8 @@ $cart = $_SESSION['cart'] ?? [];
     <button class="submit" onclick="window.location.href='../VIEW/home_page.php'">Home</button>
 </header>
 
-
 <div class="page-wrapper">
 
-    
     <div class="cart-wrapper">
         <div class="cart-container">
 
@@ -87,19 +84,18 @@ $cart = $_SESSION['cart'] ?? [];
         </div>
     </div>
 
-   
-<div class="review-wrapper">
-    <div class="review-box">
+    <div class="review-wrapper">
+        <div class="review-box">
 
-        <textarea 
-            class="review-textarea"
-            placeholder="Give review here..."></textarea>
+            <textarea 
+                class="review-textarea"
+                placeholder="Give review here..."></textarea>
 
-        <div class="review-divider"></div>
+            <div class="review-divider"></div>
 
-        <button class="review-btn">Add review</button>
+            <button class="review-btn">Add review</button>
+        </div>
     </div>
-</div>
 
 
 </div>
@@ -116,46 +112,8 @@ $cart = $_SESSION['cart'] ?? [];
     <p>© 2025 AgroLink. All rights reserved.</p>
 </footer>
 
-
-<script>
-    
-document.querySelectorAll(".plus").forEach(btn => {
-    btn.addEventListener("click", function () {
-        let row = this.closest("tr");
-        let qtyEl = row.querySelector(".qty");
-        let price = parseInt(row.querySelector(".price").innerText);
-        let qty = parseInt(qtyEl.innerText);
-        qty++;
-        qtyEl.innerText = qty;
-        row.querySelector(".row-total").innerText = price * qty;
-        updateTotals();
-    });
-});
-
-document.querySelectorAll(".minus").forEach(btn => {
-    btn.addEventListener("click", function () {
-        let row = this.closest("tr");
-        let qtyEl = row.querySelector(".qty");
-        let price = parseInt(row.querySelector(".price").innerText);
-        let qty = parseInt(qtyEl.innerText);
-        if (qty > 1) {
-            qty--;
-            qtyEl.innerText = qty;
-            row.querySelector(".row-total").innerText = price * qty;
-            updateTotals();
-        }
-    });
-});
-
-function updateTotals() {
-    let subTotal = 0;
-    document.querySelectorAll(".row-total").forEach(el => {
-        subTotal += parseInt(el.innerText);
-    });
-    document.getElementById("subTotal").innerText = subTotal + " ৳";
-    document.getElementById("grandTotal").innerText = (subTotal + 60) + " ৳";
-}
-</script>
+<!-- External JS -->
+<script src="../JS/purses.js"></script>
 
 </body>
 </html>
