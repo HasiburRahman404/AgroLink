@@ -1,16 +1,16 @@
 <?php
-// Include database connection
-include "../MODEL/Database_conn.php"; // your previous connection format
 
-// Initialize variables
+include "../MODEL/Database_conn.php"; 
+
+
 $name = $email = $phonenumber = $password = $confirmpassword = "";
 $nameErr = $emailErr = $phoneErr = $passwordErr = $confirmErr = "";
 $success = $error = "";
 
-// Only run validation if form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // ---------- Full Name ----------
+ 
     if (empty($_POST["name"])) {
         $nameErr = "Full Name is required";
     } else {
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Email ----------
+  
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
     } else {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Phone Number ----------
+    
     if (empty($_POST["phonenumber"])) {
         $phoneErr = "Phone number is required";
     } else {
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Password ----------
+   
     if (empty($_POST["password"])) {
         $passwordErr = "Password is required";
     } else {
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Confirm Password ----------
+   
     if (empty($_POST["confirmpassword"])) {
         $confirmErr = "Confirm your password";
     } else {
@@ -60,29 +60,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Insert into Database ----------
-    if (
-        empty($nameErr) &&
-        empty($emailErr) &&
-        empty($phoneErr) &&
-        empty($passwordErr) &&
-        empty($confirmErr)
-    ) {
+   if (
+    empty($nameErr) &&
+    empty($emailErr) &&
+    empty($phoneErr) &&
+    empty($passwordErr) &&
+    empty($confirmErr)
+) {
 
-        // Hash password
-        $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+    $conn = openConn(); 
 
-        // Your preferred format using $conn->query()
-        $sql = "INSERT INTO farmer_information (UserName, Email, PhoneNumber, password) 
-                VALUES ('$name', '$email', '$phonenumber', '$hashPassword')";
+    $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        if ($conn->query($sql) === TRUE) {
-            $success = "Registration Complete";
-            // Clear form fields
-            $name = $email = $phonenumber = $password = $confirmpassword = "";
-        } else {
-            $error = "Error: " . $conn->error;
-        }
+    $result = addCustomer($conn, $name, $email, $phonenumber, $hashPassword);
+
+    if ($result === TRUE) {
+        $success = "Registration Complete";
+
+        $name = $email = $phonenumber = $password = $confirmpassword = "";
+    } else {
+        $error = "Error: " . $conn->error;
     }
+
+    $conn->close();
+}
+
 }
 ?>
+

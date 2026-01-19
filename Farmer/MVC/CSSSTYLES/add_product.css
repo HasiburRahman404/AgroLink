@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
-/* ===== BODY ===== */
+
 body {
     background: #f4f6f8;
     color: #333;
 }
 
-/* ===== TOPBAR ===== */
+
 .topbar {
     background: #2e7d32;
     color: #fff;
@@ -20,11 +20,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;    /* stick to top */
+    position: fixed;    
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;      /* stay above sidebar/content */
+    z-index: 1000;      
 }
 
 .topbar .logo {
@@ -43,20 +43,20 @@ body {
     font-size: 14px;
 }
 
-/* ===== CONTAINER ===== */
+
 .container {
     display: flex;
 }
 
-/* ===== SIDEBAR ===== */
+
 .sidebar {
     width: 220px;
     background: #1b5e20;
-    position: fixed;     /* fixed so it stays on scroll */
-    top: 60px;           /* same as topbar height */
+    position: fixed;     
+    top: 60px;          
     bottom: 0;
     left: 0;
-    overflow-y: auto;    /* scroll if sidebar content overflows */
+    overflow-y: auto;    
 }
 
 .sidebar ul {
@@ -81,19 +81,18 @@ body {
     background: #388e3c;
 }
 
-/* ===== CONTENT ===== */
 .content {
-    margin-left: 220px;      /* sidebar width */
+    margin-left: 220px;      
     padding: 25px;
-    padding-top: 80px;       /* leave space for fixed topbar */
+    padding-top: 80px;      
     flex: 1;
 }
 
-/* ===== ADD PRODUCT PAGE FORM ===== */
+
 .content.add-product-page {
     display: flex;
     justify-content: center;
-    align-items: flex-start;  /* align top of form */
+    align-items: flex-start;  
     min-height: calc(100vh - 60px);
 }
 
@@ -159,7 +158,7 @@ body {
     background: #388e3c;
 }
 
-/* ===== ERROR & SUCCESS MESSAGES ===== */
+
 .error { 
     color: red; 
     font-size: 0.9em; 
@@ -174,7 +173,7 @@ body {
     margin-bottom: 15px; 
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
     .sidebar {
         width: 180px;

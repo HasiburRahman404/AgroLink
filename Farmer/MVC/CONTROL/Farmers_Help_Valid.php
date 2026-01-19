@@ -7,7 +7,7 @@ $success = $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit_problem"])) {
 
-    // Validate Email
+ 
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
     } else {
@@ -17,27 +17,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit_problem"])) {
         }
     }
 
-    // Validate Problem
+ 
     if (empty($_POST["problem"])) {
         $problemErr = "Problem description is required";
     } else {
         $problem = trim($_POST["problem"]);
     }
 
-    // Insert into database if no errors
+   
     if (empty($emailErr) && empty($problemErr)) {
-        $email_db = $conn->real_escape_string($email);
-        $problem_db = $conn->real_escape_string($problem);
 
-        $sql = "INSERT INTO farmers_help (Email, Description)
-                VALUES ('$email_db', '$problem_db')";
+        $conn = openConn(); 
 
-        if ($conn->query($sql)) {
+        $result = addFarmerProblem($conn, $email, $problem);
+
+        if ($result === TRUE) {
             $success = "Problem submitted successfully!";
-            $email = $problem = "";
+            $email = $problem = "";  // Clear fields
         } else {
-            $error = "Database error!";
+            $error = "Database error: " . $conn->error;
         }
+
+        $conn->close();
     }
 }
 ?>

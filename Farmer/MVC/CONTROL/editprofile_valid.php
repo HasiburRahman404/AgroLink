@@ -2,20 +2,18 @@
 session_start();
 include "../MODEL/Database_conn.php";
 
-// Protect page
 
-
-// Initialize values (prefill from session)
 $name = $_SESSION["username"] ?? "";
 $phonenumber = $_SESSION["number"] ?? "";
+
 
 $nameErr = $phoneErr = "";
 $success = "";
 
-// Run only when form submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // ---------- Full Name ----------
+  
     if (empty($_POST["name"])) {
         $nameErr = "Full Name is required";
     } else {
@@ -25,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Phone Number ----------
+
     if (empty($_POST["phonenumber"])) {
         $phoneErr = "Phone number is required";
     } else {
@@ -35,20 +33,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // ---------- Update Database ----------
+   
     if (empty($nameErr) && empty($phoneErr)) {
 
+        $conn = openConn(); 
         $email = $_SESSION["email"];
 
-        $sql = "UPDATE farmer_information 
-                SET UserName='$name', PhoneNumber='$phonenumber'
-                WHERE Email='$email'";
+        $result = updateFarmerProfile($conn, $email, $name, $phonenumber);
 
-        if ($conn->query($sql) === TRUE) {
+        if ($result === TRUE) {
             $_SESSION["username"] = $name;
             $_SESSION["number"] = $phonenumber;
             $success = "Profile updated successfully";
+        } else {
+            $success = "Database error: " . $conn->error;
         }
+
+        $conn->close();
     }
 }
 ?>

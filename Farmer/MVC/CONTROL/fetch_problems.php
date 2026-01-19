@@ -1,25 +1,25 @@
 <?php
 include "../MODEL/Database_conn.php";
+$conn = openConn();
 
 $sql = "SELECT * FROM farmers_help";
 $result = $conn->query($sql);
 
-echo "<table>
+echo "<table border='1' cellpadding='5' cellspacing='0'>
         <tr>
-            <th>#</th>
             <th>Email</th>
             <th>Description</th>
         </tr>";
 
 if ($result && $result->num_rows > 0) {
-    $i = 1;
     while ($row = $result->fetch_assoc()) {
+        $email = htmlspecialchars($row['Email']);
+        $description = htmlspecialchars($row['Description']);
+
         echo "<tr>
-                <td>$i</td>
-                <td>".htmlspecialchars($row['Email'])."</td>
-                <td>".htmlspecialchars($row['Description'])."</td>
+                <td>{$email}</td>
+                <td>{$description}</td>
               </tr>";
-        $i++;
     }
 } else {
     echo "<tr>

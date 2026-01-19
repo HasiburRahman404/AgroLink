@@ -28,7 +28,7 @@ if (!isset($_SESSION["email"])) {
         <ul>
            <li><a href="admin_dashboard.php">Dashboard</a></li>
             <li><a href="farmerprofile.php">Profile</a></li>
-             <li class="active"><a href="my_products.php">My Products</a></li>
+             <li><a href="my_products.php">My Products</a></li>
             <li><a href="add_product.php">Add Product</a></li>
             <li><a href="Farmers_help.php">Farmers Help</a></li>
             <li><a href="orders.php">Orders</a></li>

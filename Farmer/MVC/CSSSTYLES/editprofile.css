@@ -127,7 +127,7 @@ body {
     border-color: #2e7d32;
 }
 
-/* ===== BUTTON ===== */
+
 .btn {
     width: 100%;
     padding: 10px;
@@ -143,7 +143,7 @@ body {
     background-color: #1b5e20;
 }
 
-/* ===== SUCCESS MESSAGE ===== */
+
 .success {
     margin-bottom: 15px;
     padding: 10px;
@@ -153,14 +153,14 @@ body {
     font-size: 14px;
 }
 
-/* ===== ERROR MESSAGE ===== */
+
 .error {
     margin-top: 4px;
     font-size: 13px;
     color: red;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;

@@ -41,7 +41,6 @@ include '../CONTROL/register_valid.php';
 
         <button type="submit" id="button">Register</button>
 
-
         <p class="logintext">
             Already have an account? <a href="Login.php">Login</a>
         </p>

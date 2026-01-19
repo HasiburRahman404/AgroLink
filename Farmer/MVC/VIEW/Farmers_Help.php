@@ -11,7 +11,7 @@ include '../CONTROL/Farmers_Help_Valid.php';
 </head>
 <body>
 
-<!-- ===== TOP BAR ===== -->
+
 <header class="topbar">
     <div class="logo">AgroLink <span>Farmer</span></div>
     <a href="#" class="logout">Logout</a>
@@ -19,7 +19,7 @@ include '../CONTROL/Farmers_Help_Valid.php';
 
 <div class="container">
 
-    <!-- ===== SIDEBAR ===== -->
+    
     <aside class="sidebar">
         <ul>
             <li><a href="admin_dashboard.php">Dashboard</a></li>
@@ -32,7 +32,7 @@ include '../CONTROL/Farmers_Help_Valid.php';
         </ul>
     </aside>
 
-    <!-- ===== MAIN CONTENT ===== -->
+    
     <main class="content">
 
         <h1>🌾 Farmer Help Hub</h1>
@@ -42,7 +42,7 @@ include '../CONTROL/Farmers_Help_Valid.php';
         if (!empty($error)) echo "<p class='error'>$error</p>";
         ?>
 
-        <!-- ===== PROBLEM SUBMISSION FORM ===== -->
+       
         <div class="help-form">
             <form method="POST">
                 <label>Email</label>
@@ -57,13 +57,13 @@ include '../CONTROL/Farmers_Help_Valid.php';
             </form>
         </div>
 
-        <!-- ===== SHOW PROBLEMS BUTTON ===== -->
+       
         <div class="problems-header">
             <h2>Submitted Problems by Farmers</h2>
             <button class="show-btn" onclick="loadProblems()">Show Problems</button>
         </div>
 
-        <!-- ===== AJAX TABLE AREA ===== -->
+        
         <div id="problemsArea"></div>
 
     </main>

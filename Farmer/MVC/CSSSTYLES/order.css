@@ -39,13 +39,14 @@ body {
 
 .container {
     display: flex;
+    min-height: calc(100vh - 60px);
 }
 
 
 .sidebar {
     width: 220px;
     background: #1b5e20;
-    min-height: calc(100vh - 60px);
+    padding-top: 20px;
 }
 
 .sidebar ul {
@@ -58,15 +59,13 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-
 .sidebar ul li a {
     display: block;
     padding: 15px 20px;
-    color: #ffffff;       
-    text-decoration: none; 
+    color: #ffffff;
+    text-decoration: none;
     cursor: pointer;
 }
-
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
@@ -85,37 +84,12 @@ body {
 }
 
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-    font-size: 28px;
-    color: #2e7d32;
-}
-
-.card p {
-    margin-top: 5px;
-    color: #555;
-}
-
-
 .table-box {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
 .table-box h2 {
@@ -132,6 +106,7 @@ table th,
 table td {
     padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 table th {
@@ -142,29 +117,3 @@ table th {
 table tr:nth-child(even) {
     background: #f1f1f1;
 }
-
-
-.sidebar ul li button {
-    all: unset;                     
-    display: block;                 
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #1b5e20 !important; 
-    color: #fff !important;        
-    text-align: left;
-    font-size: 16px;
-    cursor: pointer;
-    box-sizing: border-box;
-    transition: background 0.3s;
-}
-
-
-.sidebar ul li button:hover {
-    background-color: #388e3c !important; 
-}
-
-
-.sidebar ul li button.active {
-    background-color: #388e3c !important; 
-}
-

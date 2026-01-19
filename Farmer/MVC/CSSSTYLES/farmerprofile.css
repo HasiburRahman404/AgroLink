@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     background: #f4f6f8;
 }
 
-/* ===== TOPBAR ===== */
+
 .topbar {
     background: #2e7d32;
     color: #fff;
@@ -20,31 +20,32 @@ body {
     align-items: center;
 }
 
-.logo {
+.topbar .logo {
     font-size: 22px;
     font-weight: bold;
 }
 
-.logo span {
+.topbar .logo span {
     font-size: 14px;
+    opacity: 0.8;
 }
 
 .logout {
     color: #fff;
     text-decoration: none;
+    font-size: 14px;
 }
 
-/* ===== LAYOUT ===== */
 .layout {
     display: flex;
-    min-height: calc(100vh - 60px); /* full height minus topbar */
+    min-height: 100vh;
 }
 
-/* ===== SIDEBAR ===== */
+
 .sidebar {
     width: 220px;
     background: #1b5e20;
-    min-height: calc(100vh - 60px);
+    min-height: 100vh;
 }
 
 .sidebar ul {
@@ -52,38 +53,49 @@ body {
 }
 
 .sidebar ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    display: block;
     padding: 15px 20px;
-    color: #e0f2f1;
-    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px; 
 }
 
-.sidebar ul li.active,
-.sidebar ul li:hover {
+.sidebar ul li.active a,
+.sidebar ul li a:hover {
     background: #388e3c;
+    color: #ffffff;
 }
 
-/* ===== MAIN CONTENT ===== */
+
 .content {
     flex: 1;
+    padding: 25px;
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
-    padding: 30px;
+    justify-content: center; 
+    align-items: flex-start;
 }
 
-/* ===== WRAPPER ===== */
 .profile-wrapper {
-    text-align: center;
+    width: 100%;
+    max-width: 450px;
 }
 
-/* ===== PROFILE CARD ===== */
+
 .profile-card {
     background: #fff;
     padding: 30px;
-    width: 420px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
 .profile-row {
@@ -98,13 +110,14 @@ body {
 
 .profile-row span {
     color: #333;
+    font-size: 14px;
 }
 
-/* ===== EDIT PROFILE BUTTON ===== */
+
 .edit-btn {
     display: inline-block;
     padding: 10px 25px;
-    background-color: #2e7d32; /* green color */
+    background-color: #2e7d32;
     color: #fff;
     font-size: 15px;
     border-radius: 5px;
@@ -114,5 +127,5 @@ body {
 }
 
 .edit-btn:hover {
-    background-color: #1b5e20; /* darker green on hover */
+    background-color: #1b5e20;
 }
